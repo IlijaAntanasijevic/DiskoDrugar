@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFBF9;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+input[type=range]{accent-color:#3AAFC4}
+input[type=checkbox],input[type=radio]{accent-color:#3AAFC4}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px;z-index:99999"></dc-import>
+
+<div data-screen-label="Putovanja v2 - filteri sidebar">
+
+  <div style="background:#3B3B3B;color:#D9D9D9;font-size:12.5px;display:flex;justify-content:space-between;padding:8px 48px">
+    <span>Radnim danima 09–17h · Subotom 10–14h</span>
+    <div style="display:flex;gap:24px"><span>011 40 88 297</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="375e59515877535e445c58534542505645474243584156595d56194544">[email&#160;protected]</a></span></div>
+  </div>
+
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:14px 48px">
+    <a href="index.html"><img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:46px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:600">
+      <a href="putovanja.html" style="color:#2E97AB">Putovanja</a>
+      <a href="putovanja.html" style="color:#3B3B3B">Destinacije</a>
+      <a href="last-minute.html" style="color:#3B3B3B">Last minute</a>
+      <a href="upoznajte-zemlju.html" style="color:#3B3B3B">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#3B3B3B">Galerija</a>
+      <a href="kontakt.html" style="color:#3B3B3B">Kontakt</a>
+      <a href="kontakt.html" style="background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700" style-hover="background:#2E97AB;color:#fff">Pošalji upit</a>
+    </nav>
+  </div>
+
+  <!-- naslov -->
+  <div style="padding:52px 48px 8px">
+    <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:14px"><a href="index.html" style="color:#8A8A8A">Početna</a> / <span style="color:#3B3B3B;font-weight:600">Putovanja</span></div>
+    <h1 style="margin:0 0 10px;font-size:40px;font-weight:800;letter-spacing:-.02em">Sva putovanja</h1>
+    <p style="margin:0;font-size:16px;color:#6B6B6B;max-width:560px;line-height:1.6">12 programa sa terminima do aprila 2027. Cene su po osobi, avio-prevoz uključen.</p>
+  </div>
+
+  <!-- sidebar + grid -->
+  <div style="padding:36px 48px 64px;display:grid;grid-template-columns:264px 1fr;gap:28px;align-items:start">
+
+    <!-- SIDEBAR FILTERI -->
+    <aside style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:22px 20px;position:sticky;top:20px;display:flex;flex-direction:column;gap:24px">
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-size:15px;font-weight:800;letter-spacing:-.01em">Filteri</span>
+        <span onClick="{{ resetFilters }}" style="font-size:12.5px;font-weight:600;color:#2E97AB;cursor:pointer" style-hover="color:#3B3B3B">Poništi sve</span>
+      </div>
+
+      <!-- Region -->
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#8A8A8A">REGION</div>
+        <sc-for list="{{ regionItems }}" as="r" hint-placeholder-count="5">
+          <label style="display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;cursor:pointer;color:#3B3B3B">
+            <input type="checkbox" checked="{{ r.checked }}" onChange="{{ r.toggle }}" style="width:16px;height:16px;margin:0;cursor:pointer">
+            <span style="flex:1">{{ r.name }}</span>
+            <sc-if value="{{ showCounts }}" hint-placeholder-val="{{ true }}">
+              <span style="font-size:12px;color:#8A8A8A;background:#F3F1ED;padding:2px 8px;border-radius:99px">{{ r.count }}</span>
+            </sc-if>
+          </label>
+        </sc-for>
+      </div>
+
+      <!-- Cena -->
+      <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(0,0,0,.08);padding-top:20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#8A8A8A">CENA DO</div>
+        <input type="range" min="700" max="1800" step="50" value="{{ maxPrice }}" onChange="{{ setMaxPrice }}" style="width:100%;margin:0;cursor:pointer">
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#8A8A8A">
+          <span>700 €</span>
+          <span style="font-weight:700;color:#3B3B3B">{{ maxPriceLabel }}</span>
+        </div>
+      </div>
+
+      <!-- Trajanje -->
+      <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(0,0,0,.08);padding-top:20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#8A8A8A">TRAJANJE</div>
+        <sc-for list="{{ durationItems }}" as="d" hint-placeholder-count="4">
+          <label style="display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;cursor:pointer;color:#3B3B3B">
+            <input type="radio" name="trajanje" checked="{{ d.checked }}" onChange="{{ d.select }}" style="width:16px;height:16px;margin:0;cursor:pointer">
+            <span>{{ d.label }}</span>
+          </label>
+        </sc-for>
+      </div>
+
+      <!-- Mesec polaska -->
+      <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(0,0,0,.08);padding-top:20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#8A8A8A">MESEC POLASKA</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <sc-for list="{{ monthItems }}" as="m" hint-placeholder-count="6">
+            <span onClick="{{ m.toggle }}" style="font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:4px;cursor:pointer;border:{{ m.border }};background:{{ m.bg }};color:{{ m.color }}">{{ m.name }}</span>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- Ponuda -->
+      <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(0,0,0,.08);padding-top:20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#8A8A8A">PONUDA</div>
+        <sc-for list="{{ offerItems }}" as="o" hint-placeholder-count="3">
+          <label style="display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:500;cursor:pointer;color:#3B3B3B">
+            <input type="checkbox" checked="{{ o.checked }}" onChange="{{ o.toggle }}" style="width:16px;height:16px;margin:0;cursor:pointer">
+            <span>{{ o.label }}</span>
+          </label>
+        </sc-for>
+      </div>
+
+    </aside>
+
+    <!-- REZULTATI -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:14px;color:#6B6B6B"><strong style="color:#3B3B3B">{{ resultCount }}</strong> {{ resultWord }}</span>
+        <div style="display:flex;gap:10px;align-items:center;font-size:13.5px;color:#6B6B6B">
+          <span>Sortiraj:</span>
+          <select value="{{ sortBy }}" onChange="{{ setSort }}" style="border:1px solid rgba(0,0,0,.15);padding:9px 12px;border-radius:4px;font-weight:600;color:#3B3B3B;font-size:13.5px;font-family:inherit;background:#fff;cursor:pointer">
+            <option value="polazak">Najbliži polazak</option>
+            <option value="cena-asc">Cena, najniža</option>
+            <option value="cena-desc">Cena, najviša</option>
+            <option value="trajanje">Trajanje, najduže</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px">
+        <sc-for list="{{ filteredTrips }}" as="t" hint-placeholder-count="6">
+          <a href="putovanje-tajland.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+            <div style="position:relative">
+              <img src="{{ t.img }}" alt="{{ t.title }}" style="width:100%;height:230px;object-fit:cover;display:block">
+              <sc-if value="{{ t.hasBadge }}" hint-placeholder-val="{{ false }}">
+                <span style="position:absolute;top:12px;left:12px;background:{{ t.badgeBg }};color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">{{ t.badge }}</span>
+              </sc-if>
+            </div>
+            <div style="padding:18px 20px 20px">
+              <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">{{ t.tag }}</div>
+              <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">{{ t.title }}</div>
+              <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">{{ t.meta }}</div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+                <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">{{ t.priceLabel }}</span></div>
+                <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+              </div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1px dashed rgba(0,0,0,.2);border-radius:4px;padding:56px 24px;text-align:center;background:#fff">
+          <div style="font-size:17px;font-weight:700;margin-bottom:6px">Nema putovanja za izabrane filtere</div>
+          <div style="font-size:14px;color:#6B6B6B;margin-bottom:18px">Pokušajte da proširite cenu ili uklonite neki od filtera.</div>
+          <span onClick="{{ resetFilters }}" style="display:inline-block;background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer" style-hover="background:#2E97AB;color:#fff">Poništi filtere</span>
+        </div>
+      </sc-if>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#3B3B3B;color:#B9B9B9;padding:36px 48px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:20px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+    <div style="display:flex;gap:28px;font-size:13.5px">
+      <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">Putovanja</a>
+      <a href="upoznajte-zemlju.html" style="color:#B9B9B9" style-hover="color:#fff">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#B9B9B9" style-hover="color:#fff">Galerija</a>
+      <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Kontakt</a>
+    </div>
+    <div style="font-size:13px">© 2026 · Licenca OTP 123/2025 · Beograd</div>
+  </div>
+
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;prikaziBrojace&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sidebar&quot;}}">
+const TRIPS = [
+  { img: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80", tag: "TAJLAND · PUKET", title: "Tajland - plaže i hramovi", meta: "13–14 dana · 7 termina · prvi polazak 25. okt", region: "Azija", price: 1399, days: 13, month: "Okt", dep: 0, badge: "AKCIJA −400 €", badgeBg: "#3B3B3B", offer: "akcija" },
+  { img: "https://images.unsplash.com/photo-1505881502353-a1986add3762?w=800&q=80", tag: "TANZANIJA · ZANZIBAR", title: "Zanzibar - začinsko ostrvo", meta: "10 dana · 5 termina · prvi polazak 15. nov", region: "Afrika", price: 1199, days: 10, month: "Nov", dep: 2 },
+  { img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80", tag: "INDONEZIJA · BALI", title: "Bali - ostrvo bogova", meta: "12 dana · 4 termina · prvi polazak 18. jan", region: "Azija", price: 1499, days: 12, month: "Jan", dep: 6, badge: "FIRST MINUTE", badgeBg: "#3AAFC4", offer: "first" },
+  { img: "https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80", tag: "KARIBI · KUBA", title: "Kuba - Havana i Varadero", meta: "14 dana · 3 termina · prvi polazak 11. jan", region: "Karibi", price: 1799, days: 14, month: "Jan", dep: 5 },
+  { img: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80", tag: "MALDIVI", title: "Maldivi - plavo do horizonta", meta: "9 dana · 4 termina · prvi polazak 05. dec", region: "Indijski okean", price: 1699, days: 9, month: "Dec", dep: 4 },
+  { img: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80", tag: "ŠPANIJA · TENERIFE", title: "Tenerife - večno proleće", meta: "8 dana · 2 termina · prvi polazak 21. nov", region: "Evropa", price: 899, days: 8, month: "Nov", dep: 3, badge: "LAST MINUTE", badgeBg: "#3AAFC4", offer: "last" },
+  { img: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80", tag: "VIJETNAM", title: "Vijetnam - od Hanoja do delte Mekonga", meta: "12 dana · 3 termina · prvi polazak 02. feb", region: "Azija", price: 1549, days: 12, month: "Feb", dep: 7 },
+  { img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", tag: "UAE · DUBAI", title: "Dubai - grad budućnosti", meta: "6 dana · 6 termina · prvi polazak 28. okt", region: "Azija", price: 749, days: 6, month: "Okt", dep: 1 },
+  { img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80", tag: "ŠRI LANKA", title: "Šri Lanka - čaj, slonovi i okean", meta: "11 dana · 2 termina · prvi polazak 09. mar", region: "Indijski okean", price: 1349, days: 11, month: "Mar", dep: 8 }
+];
+
+const REGIONS = ["Azija", "Afrika", "Karibi", "Indijski okean", "Evropa"];
+const MONTHS = ["Okt", "Nov", "Dec", "Jan", "Feb", "Mar"];
+const DURATIONS = [
+  { key: "sve", label: "Sva trajanja", test: () => true },
+  { key: "kratko", label: "Do 7 dana", test: (d) => d <= 7 },
+  { key: "srednje", label: "8–11 dana", test: (d) => d >= 8 && d <= 11 },
+  { key: "dugo", label: "12+ dana", test: (d) => d >= 12 }
+];
+const OFFERS = [
+  { key: "akcija", label: "Akcija" },
+  { key: "last", label: "Last minute" },
+  { key: "first", label: "First minute" }
+];
+
+class Component extends DCLogic {
+  state = { regions: {}, months: {}, offers: {}, maxPrice: 1800, duration: "sve", sortBy: "polazak" };
+
+  toggleIn(field, key) {
+    this.setState((s) => ({ [field]: { ...s[field], [key]: !s[field][key] } }));
+  }
+
+  renderVals() {
+    const s = this.state;
+    const anyRegion = REGIONS.some((r) => s.regions[r]);
+    const anyMonth = MONTHS.some((m) => s.months[m]);
+    const anyOffer = OFFERS.some((o) => s.offers[o.key]);
+    const dur = DURATIONS.find((d) => d.key === s.duration) || DURATIONS[0];
+
+    const fmt = (n) => n.toLocaleString("de-DE") + " €";
+
+    let filtered = TRIPS.filter((t) =>
+      (!anyRegion || s.regions[t.region]) &&
+      (!anyMonth || s.months[t.month]) &&
+      (!anyOffer || (t.offer && s.offers[t.offer])) &&
+      t.price <= s.maxPrice &&
+      dur.test(t.days)
+    );
+
+    const sorters = {
+      "polazak": (a, b) => a.dep - b.dep,
+      "cena-asc": (a, b) => a.price - b.price,
+      "cena-desc": (a, b) => b.price - a.price,
+      "trajanje": (a, b) => b.days - a.days
+    };
+    filtered = filtered.slice().sort(sorters[s.sortBy] || sorters["polazak"]);
+
+    const n = filtered.length;
+    const resultWord = n === 1 ? "putovanje" : (n >= 2 && n <= 4 ? "putovanja" : "putovanja");
+
+    return {
+      showCounts: this.props.prikaziBrojace ?? true,
+      regionItems: REGIONS.map((r) => ({
+        name: r,
+        count: TRIPS.filter((t) => t.region === r).length,
+        checked: !!s.regions[r],
+        toggle: () => this.toggleIn("regions", r)
+      })),
+      durationItems: DURATIONS.map((d) => ({
+        label: d.label,
+        checked: s.duration === d.key,
+        select: () => this.setState({ duration: d.key })
+      })),
+      monthItems: MONTHS.map((m) => {
+        const on = !!s.months[m];
+        return {
+          name: m,
+          bg: on ? "#3B3B3B" : "#fff",
+          color: on ? "#fff" : "#3B3B3B",
+          border: on ? "1px solid #3B3B3B" : "1px solid rgba(0,0,0,.15)",
+          toggle: () => this.toggleIn("months", m)
+        };
+      }),
+      offerItems: OFFERS.map((o) => ({
+        label: o.label,
+        checked: !!s.offers[o.key],
+        toggle: () => this.toggleIn("offers", o.key)
+      })),
+      maxPrice: s.maxPrice,
+      maxPriceLabel: fmt(s.maxPrice),
+      setMaxPrice: (e) => this.setState({ maxPrice: +e.target.value }),
+      sortBy: s.sortBy,
+      setSort: (e) => this.setState({ sortBy: e.target.value }),
+      resetFilters: () => this.setState({ regions: {}, months: {}, offers: {}, maxPrice: 1800, duration: "sve", sortBy: "polazak" }),
+      filteredTrips: filtered.map((t) => ({
+        ...t,
+        hasBadge: !!t.badge,
+        badge: t.badge || "",
+        badgeBg: t.badgeBg || "#3B3B3B",
+        priceLabel: fmt(t.price)
+      })),
+      resultCount: n,
+      resultWord,
+      noResults: n === 0
+    };
+  }
+}
+</script>
+</body>
+</html>
