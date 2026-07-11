@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFBF9;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+input,textarea,select{font-family:'Archivo',sans-serif}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#3AAFC4 !important;box-shadow:0 0 0 3px rgba(58,175,196,.18)}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div data-screen-label="Kontakt - upit forma">
+
+  <div style="background:#3B3B3B;color:#D9D9D9;font-size:12.5px;display:flex;justify-content:space-between;padding:8px 48px">
+    <span>Radnim danima 09–17h · Subotom 10–14h</span>
+    <div style="display:flex;gap:24px"><span>011 40 88 297</span><span>info@diskodrugarputovanja.rs</span></div>
+  </div>
+
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:14px 48px">
+    <a href="index.html"><img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:46px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:600">
+      <a href="putovanja.html" style="color:#3B3B3B">Putovanja</a>
+      <a href="putovanja.html" style="color:#3B3B3B">Destinacije</a>
+      <a href="last-minute.html" style="color:#3B3B3B">Last minute</a>
+      <a href="upoznajte-zemlju.html" style="color:#3B3B3B">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#3B3B3B">Galerija</a>
+      <a href="kontakt.html" style="color:#2E97AB">Kontakt</a>
+      <a href="kontakt.html" style="background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700" style-hover="background:#2E97AB;color:#fff">Pošalji upit</a>
+    </nav>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 420px;gap:56px;padding:52px 48px 64px;align-items:start">
+
+    <!-- forma -->
+    <div>
+      <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:14px"><a href="index.html" style="color:#8A8A8A">Početna</a> / <span style="color:#3B3B3B;font-weight:600">Kontakt</span></div>
+      <h1 style="margin:0 0 10px;font-size:40px;font-weight:800;letter-spacing:-.02em">Pošaljite upit</h1>
+      <p style="margin:0 0 34px;font-size:16px;color:#6B6B6B;max-width:540px;line-height:1.6">Recite nam kuda biste i kada - odgovaramo u roku od 24h sa konkretnom ponudom. Upit vas ni na šta ne obavezuje.</p>
+
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:32px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">IME I PREZIME</label>
+            <input type="text" placeholder="npr. Jelena Petrović" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">TELEFON</label>
+            <input type="text" placeholder="06x xxx xx xx" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">EMAIL</label>
+            <input type="email" placeholder="vas@email.rs" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">BROJ PUTNIKA</label>
+            <select value="{{ putnici }}" onChange="{{ setPutnici }}" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9">
+              <option value="1">1 putnik</option>
+              <option value="2">2 putnika</option>
+              <option value="3">3 putnika</option>
+              <option value="4">4 putnika</option>
+              <option value="5">5+ putnika</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">PUTOVANJE</label>
+            <select value="{{ putovanje }}" onChange="{{ setPutovanje }}" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9">
+              <option value="Tajland - plaže i hramovi">Tajland - plaže i hramovi</option>
+              <option value="Zanzibar - začinsko ostrvo">Zanzibar - začinsko ostrvo</option>
+              <option value="Bali - ostrvo bogova">Bali - ostrvo bogova</option>
+              <option value="Kuba - Havana i Varadero">Kuba - Havana i Varadero</option>
+              <option value="Maldivi">Maldivi</option>
+              <option value="Još ne znam - treba mi predlog">Još ne znam - treba mi predlog</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">TERMIN</label>
+            <select value="{{ termin }}" onChange="{{ setTermin }}" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9">
+              <option value="25. okt – 06. nov">25. okt – 06. nov · 13 dana</option>
+              <option value="15. nov – 27. nov">15. nov – 27. nov · 13 dana</option>
+              <option value="04. jan – 16. jan">04. jan – 16. jan · 13 dana</option>
+              <option value="12. jan – 24. jan">12. jan – 24. jan · 13 dana</option>
+              <option value="26. jan – 08. feb">26. jan – 08. feb · 14 dana</option>
+              <option value="12. feb – 24. feb">12. feb – 24. feb · 13 dana</option>
+              <option value="19. feb – 04. mar">19. feb – 04. mar · 14 dana</option>
+              <option value="Fleksibilan sam" style="display: none">Fleksibilan sam</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px;margin-top:18px">
+          <label style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">PORUKA</label>
+          <textarea rows="5" placeholder="Napišite nam šta vas zanima - budžet, tip smeštaja, posebne želje..." style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14.5px;color:#3B3B3B;background:#FCFBF9;resize:vertical"></textarea>
+        </div>
+        <sc-if value="{{ imaCena }}" hint-placeholder-val="{{ true }}">
+          <div style="background:#FCFBF9;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:18px 20px;margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:20px">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#6B6B6B;margin-bottom:4px">UKUPNA CENA · INFORMATIVNO</div>
+              <div style="font-size:13px;color:#8A8A8A">{{ cenaOpis }} · konačnu cenu potvrđujemo u ponudi</div>
+            </div>
+            <div style="font-size:26px;font-weight:800;letter-spacing:-.02em;white-space:nowrap">{{ ukupnaCena }}</div>
+          </div>
+        </sc-if>
+        <div style="display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:13px;color:#6B6B6B;line-height:1.5">
+          <input type="checkbox" style="margin-top:2px;accent-color:#3AAFC4">
+          <span>Saglasan/na sam da agencija koristi moje podatke isključivo radi odgovora na upit.</span>
+        </div>
+        <button style="margin-top:24px;background:#3AAFC4;color:#fff;border:none;padding:16px 34px;border-radius:4px;font-weight:700;font-size:15.5px;cursor:pointer;font-family:'Archivo',sans-serif" style-hover="background:#2E97AB">Pošalji upit</button>
+      </div>
+    </div>
+
+    <!-- kontakt info -->
+    <div style="display:flex;flex-direction:column;gap:16px;margin-top:96px">
+      <div style="background:#3B3B3B;border-radius:4px;padding:28px;color:#B9B9B9">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#7FD4E2;margin-bottom:16px">KONTAKT</div>
+        <div style="font-size:24px;font-weight:800;color:#fff;margin-bottom:4px">011 40 88 297</div>
+        <div style="font-size:14px;margin-bottom:18px">Radnim danima 09–17h · Subotom 10–14h</div>
+        <div style="font-size:14.5px;color:#E8E8E8">info@diskodrugarputovanja.rs</div>
+        <div style="border-top:1px solid rgba(255,255,255,.14);margin-top:18px;padding-top:18px;font-size:14px;line-height:1.7">Bulevar kralja Aleksandra 12<br>11000 Beograd</div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:24px 28px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#2E97AB;margin-bottom:12px">ŠTA POSLE UPITA?</div>
+        <div style="display:flex;flex-direction:column;gap:14px;font-size:14px;color:#5A5A5A;line-height:1.55">
+          <div style="display:flex;gap:12px"><span style="width:24px;height:24px;border-radius:50%;background:#E5F4F7;color:#2E97AB;font-weight:800;font-size:12.5px;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</span><span>Javljamo se u roku od 24h sa ponudom i slobodnim mestima.</span></div>
+          <div style="display:flex;gap:12px"><span style="width:24px;height:24px;border-radius:50%;background:#E5F4F7;color:#2E97AB;font-weight:800;font-size:12.5px;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</span><span>Rezervišete uz depozit od 200 € - ostatak u ratama do polaska.</span></div>
+          <div style="display:flex;gap:12px"><span style="width:24px;height:24px;border-radius:50%;background:#E5F4F7;color:#2E97AB;font-weight:800;font-size:12.5px;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</span><span>Pred put dobijate detaljna uputstva i kontakt pratioca.</span></div>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;background:#fff">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&amp;q=80" alt="Plaža" style="width:100%;height:150px;object-fit:cover;display:block">
+        <div style="padding:16px 20px;font-size:13.5px;color:#6B6B6B;line-height:1.6">Licenca OTP 123/2025 · garancija putovanja u visini 400.000 € kod Nacionalne asocijacije agencija.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:#3B3B3B;color:#B9B9B9;padding:36px 48px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:20px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+    <div style="display:flex;gap:28px;font-size:13.5px">
+      <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">Putovanja</a>
+      <a href="upoznajte-zemlju.html" style="color:#B9B9B9" style-hover="color:#fff">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#B9B9B9" style-hover="color:#fff">Galerija</a>
+      <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Kontakt</a>
+    </div>
+    <div style="font-size:13px">© 2026 · Licenca OTP 123/2025 · Beograd</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { putovanje: 'Tajland - plaže i hramovi', termin: 'Fleksibilan sam', putnici: '2', izLinka: false };
+  componentDidMount() {
+    const p = new URLSearchParams(window.location.search);
+    const s = {};
+    if (p.get('putovanje')) s.putovanje = p.get('putovanje');
+    if (p.get('termin')) s.termin = p.get('termin');
+    if (p.get('putnici')) s.putnici = p.get('putnici');
+    if (Object.keys(s).length) { s.izLinka = true; this.setState(s); }
+  }
+  renderVals() {
+    const cenePoTerminu = {
+      '25. okt – 06. nov': 1399,
+      '15. nov – 27. nov': 1499,
+      '04. jan – 16. jan': 1899,
+      '12. jan – 24. jan': 1599,
+      '26. jan – 08. feb': 1699,
+      '12. feb – 24. feb': 1599,
+      '19. feb – 04. mar': 1599
+    };
+    const ceneOdPutovanja = {
+      'Zanzibar - začinsko ostrvo': 1199,
+      'Bali - ostrvo bogova': 1499,
+      'Kuba - Havana i Varadero': 1799,
+      'Maldivi': 1699
+    };
+    let poOsobi = null;
+    if (this.state.putovanje === 'Tajland - plaže i hramovi') {
+      poOsobi = cenePoTerminu[this.state.termin] || 1399;
+    } else if (ceneOdPutovanja[this.state.putovanje]) {
+      poOsobi = ceneOdPutovanja[this.state.putovanje];
+    }
+    const brojPutnika = parseInt(this.state.putnici, 10);
+    const fmt = (n) => n.toLocaleString('de-DE') + ' €';
+    const imaCena = poOsobi !== null;
+    const putnikRec = brojPutnika === 1 ? 'putnik' : 'putnika';
+    return {
+      putovanje: this.state.putovanje,
+      termin: this.state.termin,
+      putnici: this.state.putnici,
+      izLinka: this.state.izLinka,
+      imaCena,
+      ukupnaCena: imaCena ? fmt(poOsobi * brojPutnika) : '',
+      cenaOpis: imaCena ? brojPutnika + ' ' + putnikRec + ' × ' + fmt(poOsobi) : '',
+      setPutovanje: (e) => this.setState({ putovanje: e.target.value }),
+      setTermin: (e) => this.setState({ termin: e.target.value }),
+      setPutnici: (e) => this.setState({ putnici: e.target.value })
+    };
+  }
+}
+</script>
+</body>
+</html>

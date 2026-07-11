@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EFEDE8;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div style="padding:44px;display:flex;flex-direction:column;gap:20px" data-screen-label="Mobilni prikaz">
+  <div>
+    <div style="font-size:16px;font-weight:800">Mobilni prikaz ključnih stranica</div>
+    <div style="font-size:13px;color:#8A8A8A;margin-top:4px">Početna · Detalj putovanja · Upit forma - <a href="index.html">nazad na desktop prototip</a></div>
+  </div>
+
+  <div style="display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap">
+
+    <!-- POČETNA -->
+    <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="430px,880px">
+      <div style="font-family:'Archivo',sans-serif;color:#3B3B3B;background:#FCFBF9;min-height:100%" data-screen-label="Mobil - Početna">
+        <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:58px 18px 12px">
+          <img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:36px;display:block">
+          <div style="display:flex;flex-direction:column;gap:4.5px;padding:6px 2px"><span style="width:22px;height:1.5px;background:#3B3B3B;display:block"></span><span style="width:22px;height:1.5px;background:#3B3B3B;display:block"></span><span style="width:22px;height:1.5px;background:#3B3B3B;display:block"></span></div>
+        </div>
+        <div style="position:relative;height:400px;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=900&q=80" alt="Tajland" style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(35,38,40,.82) 0%,rgba(35,38,40,.15) 60%)"></div>
+          <div style="position:absolute;left:20px;right:20px;bottom:24px;color:#fff">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#7FD4E2;margin-bottom:10px">EGZOTIČNE DESTINACIJE · MALE GRUPE</div>
+            <div style="font-size:32px;line-height:1.1;font-weight:800;letter-spacing:-.02em;margin-bottom:12px">Zima je lepša na 30 stepeni.</div>
+            <div style="display:flex;gap:10px">
+              <span style="background:#3AAFC4;color:#fff;padding:13px 20px;border-radius:4px;font-weight:700;font-size:14px">Zimski termini</span>
+              <span style="border:1.5px solid rgba(255,255,255,.65);color:#fff;padding:13px 20px;border-radius:4px;font-weight:600;font-size:14px">Pošalji upit</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding:18px;display:flex;gap:8px;overflow:hidden">
+          <span style="background:#3B3B3B;color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:4px;white-space:nowrap">Sve</span>
+          <span style="border:1px solid rgba(0,0,0,.15);font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:4px;white-space:nowrap">Tajland</span>
+          <span style="border:1px solid rgba(0,0,0,.15);font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:4px;white-space:nowrap">Zanzibar</span>
+          <span style="border:1px solid rgba(0,0,0,.15);font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:4px;white-space:nowrap">Bali</span>
+          <span style="border:1px solid rgba(0,0,0,.15);font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:4px;white-space:nowrap">Kuba</span>
+        </div>
+        <div style="padding:0 18px 24px;display:flex;flex-direction:column;gap:14px">
+          <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden">
+            <div style="position:relative"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=700&q=80" alt="Tajland" style="width:100%;height:170px;object-fit:cover;display:block"><span style="position:absolute;top:10px;left:10px;background:#3B3B3B;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:3px">AKCIJA −400 €</span></div>
+            <div style="padding:14px 16px 16px">
+              <div style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:4px">TAJLAND · PUKET</div>
+              <div style="font-size:16.5px;font-weight:700;margin-bottom:4px">Tajland - plaže i hramovi</div>
+              <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:12px">13–14 dana · 7 termina okt–mar</div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:12px">
+                <div><span style="font-size:11.5px;color:#8A8A8A">od </span><span style="font-size:18px;font-weight:800">1.399 €</span></div>
+                <span style="font-size:12.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=700&q=80" alt="Zanzibar" style="width:100%;height:170px;object-fit:cover;display:block">
+            <div style="padding:14px 16px 16px">
+              <div style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:4px">TANZANIJA · ZANZIBAR</div>
+              <div style="font-size:16.5px;font-weight:700;margin-bottom:4px">Zanzibar - začinsko ostrvo</div>
+              <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:12px">10 dana · 5 termina nov–feb</div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:12px">
+                <div><span style="font-size:11.5px;color:#8A8A8A">od </span><span style="font-size:18px;font-weight:800">1.199 €</span></div>
+                <span style="font-size:12.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </x-import>
+
+    <!-- DETALJ -->
+    <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="430px,880px">
+      <div style="font-family:'Archivo',sans-serif;color:#3B3B3B;background:#FCFBF9;min-height:100%" data-screen-label="Mobil - Putovanje detalj">
+        <div style="position:relative;height:260px;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=900&q=80" alt="Tajland" style="width:100%;height:100%;object-fit:cover;display:block">
+          <span style="position:absolute;top:62px;left:14px;width:34px;height:34px;border-radius:50%;background:rgba(35,38,40,.65);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px">‹</span>
+          <span style="position:absolute;bottom:12px;right:14px;background:rgba(35,38,40,.75);color:#fff;font-size:11px;font-weight:600;padding:5px 10px;border-radius:3px">1 / 42</span>
+        </div>
+        <div style="padding:18px 18px 0">
+          <div style="display:flex;gap:8px;margin-bottom:10px">
+            <span style="background:#3B3B3B;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:3px">AKCIJA −400 €</span>
+            <span style="background:#E5F4F7;color:#2E97AB;font-size:10.5px;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:3px">ZIMA 2027</span>
+          </div>
+          <div style="font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px">Tajland - plaže i hramovi</div>
+          <div style="font-size:13px;color:#6B6B6B;margin-bottom:16px">Puket · 13–14 dana · srpski pratilac</div>
+          <div style="display:flex;gap:18px;border-bottom:1px solid rgba(0,0,0,.1);font-size:13px;font-weight:600;overflow:hidden">
+            <span style="color:#2E97AB;padding:10px 0;border-bottom:2.5px solid #3AAFC4;white-space:nowrap">Termini</span>
+            <span style="padding:10px 0;white-space:nowrap">Program</span>
+            <span style="padding:10px 0;white-space:nowrap">Izleti</span>
+            <span style="padding:10px 0;white-space:nowrap">Smeštaj</span>
+          </div>
+        </div>
+        <div style="padding:16px 18px;display:flex;flex-direction:column;gap:10px">
+          <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-size:14.5px;font-weight:700">04. jan – 16. jan</div><div style="font-size:12px;color:#8A8A8A">13 dana · još 4 mesta</div></div>
+            <div style="text-align:right"><div style="font-size:11.5px;color:#A0A0A0;text-decoration:line-through">2.299 €</div><div style="font-size:17px;font-weight:800;color:#2E97AB">1.899 €</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-size:14.5px;font-weight:700">12. jan – 24. jan</div><div style="font-size:12px;color:#8A8A8A">13 dana · još 4 mesta</div></div>
+            <div style="text-align:right"><div style="font-size:11.5px;color:#A0A0A0;text-decoration:line-through">1.999 €</div><div style="font-size:17px;font-weight:800;color:#2E97AB">1.599 €</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-size:14.5px;font-weight:700">26. jan – 08. feb</div><div style="font-size:12px;color:#8A8A8A">14 dana · slobodno</div></div>
+            <div style="text-align:right"><div style="font-size:17px;font-weight:800">od 1.699 €</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-size:14.5px;font-weight:700">19. feb – 04. mar</div><div style="font-size:12px;color:#8A8A8A">14 dana · slobodno</div></div>
+            <div style="text-align:right"><div style="font-size:17px;font-weight:800">od 1.599 €</div></div>
+          </div>
+        </div>
+        <div style="position:sticky;bottom:0;background:#fff;border-top:1px solid rgba(0,0,0,.1);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px">
+          <div><div style="font-size:11px;color:#8A8A8A">već od</div><div style="font-size:19px;font-weight:800">1.399 €</div></div>
+          <span style="background:#3AAFC4;color:#fff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:14.5px;flex:1;text-align:center">Pošalji upit</span>
+        </div>
+      </div>
+    </x-import>
+
+    <!-- UPIT -->
+    <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="430px,880px">
+      <div style="font-family:'Archivo',sans-serif;color:#3B3B3B;background:#FCFBF9;min-height:100%" data-screen-label="Mobil - Upit forma">
+        <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:58px 18px 12px">
+          <img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:36px;display:block">
+          <div style="display:flex;flex-direction:column;gap:4.5px;padding:6px 2px"><span style="width:22px;height:1.5px;background:#3B3B3B;display:block"></span><span style="width:22px;height:1.5px;background:#3B3B3B;display:block"></span><span style="width:22px;height:1.5px;background:#3B3B3B;display:block"></span></div>
+        </div>
+        <div style="padding:22px 18px">
+          <div style="font-size:26px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px">Pošaljite upit</div>
+          <div style="font-size:13.5px;color:#6B6B6B;line-height:1.55;margin-bottom:20px">Odgovaramo u roku od 24h sa konkretnom ponudom. Upit vas ni na šta ne obavezuje.</div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">IME I PREZIME</span>
+              <div style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14px;color:#3B3B3B;background:#fff">Jelena Petrović</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">TELEFON</span>
+              <div style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14px;color:#A0A0A0;background:#fff">06x xxx xx xx</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">PUTOVANJE</span>
+              <div style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14px;color:#3B3B3B;background:#fff;display:flex;justify-content:space-between"><span>Tajland - plaže i hramovi</span><span style="color:#8A8A8A">▾</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">OKVIRNI TERMIN</span>
+              <div style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14px;color:#3B3B3B;background:#fff;display:flex;justify-content:space-between"><span>Januar 2027</span><span style="color:#8A8A8A">▾</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-size:10.5px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">PORUKA</span>
+              <div style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:13px 14px;font-size:14px;color:#A0A0A0;background:#fff;min-height:76px">Budžet, tip smeštaja, posebne želje...</div>
+            </div>
+            <span style="background:#3AAFC4;color:#fff;padding:16px 0;border-radius:4px;font-weight:700;font-size:15px;text-align:center;margin-top:4px">Pošalji upit</span>
+            <div style="text-align:center;font-size:12px;color:#8A8A8A">ili pozovite <span style="font-weight:700;color:#3B3B3B">011 40 88 297</span></div>
+          </div>
+        </div>
+      </div>
+    </x-import>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

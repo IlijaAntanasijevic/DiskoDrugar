@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFBF9;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div data-screen-label="Putovanja - listing">
+
+  <div style="background:#3B3B3B;color:#D9D9D9;font-size:12.5px;display:flex;justify-content:space-between;padding:8px 48px">
+    <span>Radnim danima 09–17h · Subotom 10–14h</span>
+    <div style="display:flex;gap:24px"><span>011 40 88 297</span><span>info@diskodrugarputovanja.rs</span></div>
+  </div>
+
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:14px 48px">
+    <a href="index.html"><img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:46px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:600">
+      <a href="putovanja.html" style="color:#2E97AB">Putovanja</a>
+      <a href="putovanja.html" style="color:#3B3B3B">Destinacije</a>
+      <a href="last-minute.html" style="color:#3B3B3B">Last minute</a>
+      <a href="upoznajte-zemlju.html" style="color:#3B3B3B">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#3B3B3B">Galerija</a>
+      <a href="kontakt.html" style="color:#3B3B3B">Kontakt</a>
+      <a href="kontakt.html" style="background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700" style-hover="background:#2E97AB;color:#fff">Pošalji upit</a>
+    </nav>
+  </div>
+
+  <!-- naslov -->
+  <div style="padding:52px 48px 8px">
+    <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:14px"><a href="index.html" style="color:#8A8A8A">Početna</a> / <span style="color:#3B3B3B;font-weight:600">Putovanja</span></div>
+    <h1 style="margin:0 0 10px;font-size:40px;font-weight:800;letter-spacing:-.02em">Sva putovanja</h1>
+    <p style="margin:0;font-size:16px;color:#6B6B6B;max-width:560px;line-height:1.6">12 programa sa terminima do aprila 2027. Cene su po osobi, avio-prevoz uključen.</p>
+  </div>
+
+  <!-- filteri -->
+  <div style="padding:28px 48px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-bottom:1px solid rgba(0,0,0,.08)">
+    <span style="background:#3B3B3B;color:#fff;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px">Sve</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Azija</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Afrika</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Karibi</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Indijski okean</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Evropa</span>
+    <div style="flex:1"></div>
+    <div style="display:flex;gap:10px;align-items:center;font-size:13.5px;color:#6B6B6B">
+      <span>Sortiraj:</span>
+      <span style="border:1px solid rgba(0,0,0,.15);padding:9px 16px;border-radius:4px;font-weight:600;color:#3B3B3B">Najbliži polazak ▾</span>
+    </div>
+  </div>
+
+  <!-- grid -->
+  <div style="padding:40px 48px 64px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+
+    <a href="putovanje-tajland.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80" alt="Tajland" style="width:100%;height:230px;object-fit:cover;display:block"><span style="position:absolute;top:12px;left:12px;background:#3B3B3B;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">AKCIJA −400 €</span></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">TAJLAND · PUKET</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Tajland - plaže i hramovi</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">13–14 dana · 7 termina · prvi polazak 25. okt</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.399 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=800&q=80" alt="Zanzibar" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">TANZANIJA · ZANZIBAR</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Zanzibar - začinsko ostrvo</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">10 dana · 5 termina · prvi polazak 15. nov</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.199 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Bali" style="width:100%;height:230px;object-fit:cover;display:block"><span style="position:absolute;top:12px;left:12px;background:#3AAFC4;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">FIRST MINUTE</span></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">INDONEZIJA · BALI</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Bali - ostrvo bogova</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">12 dana · 4 termina · prvi polazak 18. jan</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.499 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80" alt="Kuba" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">KARIBI · KUBA</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Kuba - Havana i Varadero</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">14 dana · 3 termina · prvi polazak 11. jan</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.799 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80" alt="Maldivi" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">MALDIVI</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Maldivi - plavo do horizonta</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">9 dana · 4 termina · prvi polazak 05. dec</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.699 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="last-minute.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80" alt="Tenerife" style="width:100%;height:230px;object-fit:cover;display:block"><span style="position:absolute;top:12px;left:12px;background:#3AAFC4;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">LAST MINUTE</span></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">ŠPANIJA · TENERIFE</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Tenerife - večno proleće</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">8 dana · 2 termina · prvi polazak 21. nov</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">899 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80" alt="Vijetnam" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">VIJETNAM</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Vijetnam - od Hanoja do delte Mekonga</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">12 dana · 3 termina · prvi polazak 02. feb</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.549 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80" alt="Dubai" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">UAE · DUBAI</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Dubai - grad budućnosti</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">6 dana · 6 termina · prvi polazak 28. okt</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">749 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+      <div style="position:relative"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Šri Lanka plaža" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="padding:18px 20px 20px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">ŠRI LANKA</div>
+        <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Šri Lanka - čaj, slonovi i okean</div>
+        <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">11 dana · 2 termina · prvi polazak 09. mar</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+          <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.349 €</span></div>
+          <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- footer -->
+  <div style="background:#3B3B3B;color:#B9B9B9;padding:36px 48px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:20px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+    <div style="display:flex;gap:28px;font-size:13.5px">
+      <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">Putovanja</a>
+      <a href="upoznajte-zemlju.html" style="color:#B9B9B9" style-hover="color:#fff">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#B9B9B9" style-hover="color:#fff">Galerija</a>
+      <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Kontakt</a>
+    </div>
+    <div style="font-size:13px">© 2026 · Licenca OTP 123/2025 · Beograd</div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

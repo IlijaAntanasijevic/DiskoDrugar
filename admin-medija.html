@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F2EE;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+input{font-family:'Archivo',sans-serif}
+input:focus{outline:none;border-color:#3AAFC4 !important;box-shadow:0 0 0 3px rgba(58,175,196,.18)}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div style="display:grid;grid-template-columns:232px 1fr;min-height:100vh" data-screen-label="Admin - Medija biblioteka">
+
+  <!-- sidebar -->
+  <div style="background:#3B3B3B;color:#B9B9B9;display:flex;flex-direction:column;padding:22px 0">
+    <div style="padding:0 22px 22px;border-bottom:1px solid rgba(255,255,255,.1)">
+      <div style="font-size:17px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+      <div style="font-size:11px;letter-spacing:.1em;color:#8A8A8A;margin-top:3px">ADMIN CMS</div>
+    </div>
+    <nav style="display:flex;flex-direction:column;padding:14px 12px;gap:2px;font-size:14px;font-weight:600">
+      <a href="admin-dashboard.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Dashboard</a>
+      <a href="admin-putovanja.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Putovanja</a>
+      <a href="admin-rezervacije.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Rezervacije i uplate</a>
+      <a href="admin-upiti.html" style="color:#B9B9B9;padding:11px 19px;display:flex;justify-content:space-between;align-items:center" style-hover="color:#fff"><span>Upiti</span><span style="background:#3AAFC4;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:9px">7</span></a>
+      <a href="admin-medija.html" style="color:#fff;background:rgba(58,175,196,.22);border-left:3px solid #3AAFC4;padding:11px 16px;border-radius:0 4px 4px 0">Medija</a>
+      <span style="color:#6E6E6E;padding:11px 19px">Blog</span>
+      <span style="color:#6E6E6E;padding:11px 19px">Podešavanja</span>
+    </nav>
+    <div style="margin-top:auto;padding:18px 22px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px">
+      <span style="width:32px;height:32px;border-radius:50%;background:#3AAFC4;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px">D</span>
+      <div><div style="font-size:13px;font-weight:700;color:#E8E8E8">Dragan</div><div style="font-size:11.5px;color:#8A8A8A">Vlasnik · 2FA aktivan</div></div>
+    </div>
+    <a href="index.html" style="margin:14px 22px 0;font-size:12.5px;color:#8A8A8A" style-hover="color:#fff">← Nazad na sajt</a>
+  </div>
+
+  <!-- main -->
+  <div style="padding:30px 34px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+      <div>
+        <h1 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em">Medija biblioteka</h1>
+        <div style="font-size:13px;color:#8A8A8A;margin-top:3px">248 slika · 1,4 GB na R2 · sve sa alt tekstom</div>
+      </div>
+      <span style="background:#3AAFC4;color:#fff;padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px">+ Otpremi slike</span>
+    </div>
+
+    <div style="display:flex;gap:12px;margin-bottom:18px;align-items:center">
+      <input type="text" placeholder="Pretraži po nazivu ili alt tekstu…" style="border:1px solid rgba(0,0,0,.15);border-radius:4px;padding:11px 14px;font-size:13.5px;width:300px;background:#fff;color:#3B3B3B">
+      <span style="background:#3B3B3B;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px">Sve</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Tajland</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Zanzibar</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Bali</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Hoteli</span>
+    </div>
+
+    <!-- upload zona -->
+    <div style="border:1.5px dashed rgba(0,0,0,.2);border-radius:6px;padding:22px;text-align:center;margin-bottom:18px;background:#FCFBF9">
+      <span style="font-size:13.5px;color:#6B6B6B">Prevucite slike ovde ili <span style="color:#2E97AB;font-weight:700">izaberite fajlove</span> · samo slike, automatski re-encode i WebP varijante · <span style="font-weight:700;color:#3B3B3B">alt tekst je obavezan</span></span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 300px;gap:14px;align-items:start">
+
+      <!-- grid slika -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+        <div style="background:#fff;border:1.5px solid #3AAFC4;border-radius:6px;overflow:hidden;box-shadow:0 0 0 3px rgba(58,175,196,.15)">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&q=80" alt="Tajland zaliv" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">tajland-zaliv-krabi.jpg</div><div style="font-size:11px;color:#8A8A8A">2400×1600 · 380 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=400&q=80" alt="Hram" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">wat-arun-hram.jpg</div><div style="font-size:11px;color:#8A8A8A">2000×1330 · 290 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=400&q=80" alt="Pad Thai" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">pad-thai-tezga.jpg</div><div style="font-size:11px;color:#8A8A8A">1800×1200 · 240 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=400&q=80" alt="Zanzibar" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">zanzibar-plaza.jpg</div><div style="font-size:11px;color:#8A8A8A">2200×1470 · 310 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=80" alt="Bali" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">bali-terase.jpg</div><div style="font-size:11px;color:#8A8A8A">2400×1600 · 420 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=400&q=80" alt="Havana" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">havana-ulica.jpg</div><div style="font-size:11px;color:#8A8A8A">2000×1330 · 350 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="Hotel bazen" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">patong-resort-bazen.jpg</div><div style="font-size:11px;color:#8A8A8A">2400×1600 · 390 KB</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden" style-hover="border:1px solid rgba(58,175,196,.5)">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&q=80" alt="Maldivi" style="width:100%;height:110px;object-fit:cover;display:block">
+          <div style="padding:9px 12px"><div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">maldivi-atol.jpg</div><div style="font-size:11px;color:#8A8A8A">2400×1600 · 300 KB</div></div>
+        </div>
+      </div>
+
+      <!-- detalj slike -->
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden">
+        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=700&q=80" alt="Tajland zaliv" style="width:100%;height:170px;object-fit:cover;display:block">
+        <div style="padding:18px 20px">
+          <div style="font-size:14px;font-weight:700;margin-bottom:2px">tajland-zaliv-krabi.jpg</div>
+          <div style="font-size:12px;color:#8A8A8A;margin-bottom:16px">Otpremljeno 02. jul 2026. · Dragan</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px">
+            <label style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#6B6B6B">ALT TEKST (OBAVEZAN)</label>
+            <input type="text" value="Zaliv sa tradicionalnim longtail čamcem, Krabi, Tajland" style="border:1px solid rgba(0,0,0,.15);border-radius:4px;padding:11px 12px;font-size:13px;color:#3B3B3B;background:#FCFBF9">
+          </div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#6B6B6B;margin-bottom:8px">KORIŠĆENO NA</div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-bottom:16px">
+            <a href="putovanje-tajland.html">Tajland - plaže i hramovi (hero)</a>
+            <a href="index.html">Početna - hero slajder</a>
+            <a href="galerija.html">Galerija - Tajland jan 2026</a>
+          </div>
+          <div style="display:flex;gap:8px">
+            <span style="background:#3AAFC4;color:#fff;padding:10px 16px;border-radius:4px;font-weight:700;font-size:13px;flex:1;text-align:center">Sačuvaj</span>
+            <span style="border:1px solid rgba(176,82,82,.5);color:#B05252;padding:10px 16px;border-radius:4px;font-weight:600;font-size:13px">Obriši</span>
+          </div>
+          <div style="background:#FCFBF9;border:1px solid rgba(0,0,0,.08);border-radius:4px;padding:11px 12px;font-size:11.5px;color:#8A8A8A;line-height:1.6;margin-top:14px">Varijante: 320 / 768 / 1200 / 2000 px · WebP + JPEG · CDN keš osvežen</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

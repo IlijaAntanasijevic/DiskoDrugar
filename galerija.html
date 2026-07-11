@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFBF9;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div data-screen-label="Galerija">
+
+  <div style="background:#3B3B3B;color:#D9D9D9;font-size:12.5px;display:flex;justify-content:space-between;padding:8px 48px">
+    <span>Radnim danima 09–17h · Subotom 10–14h</span>
+    <div style="display:flex;gap:24px"><span>011 40 88 297</span><span>info@diskodrugarputovanja.rs</span></div>
+  </div>
+
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:14px 48px">
+    <a href="index.html"><img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:46px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:600">
+      <a href="putovanja.html" style="color:#3B3B3B">Putovanja</a>
+      <a href="putovanja.html" style="color:#3B3B3B">Destinacije</a>
+      <a href="last-minute.html" style="color:#3B3B3B">Last minute</a>
+      <a href="upoznajte-zemlju.html" style="color:#3B3B3B">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#2E97AB">Galerija</a>
+      <a href="kontakt.html" style="color:#3B3B3B">Kontakt</a>
+      <a href="kontakt.html" style="background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700" style-hover="background:#2E97AB;color:#fff">Pošalji upit</a>
+    </nav>
+  </div>
+
+  <div style="padding:52px 48px 8px">
+    <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:14px"><a href="index.html" style="color:#8A8A8A">Početna</a> / <span style="color:#3B3B3B;font-weight:600">Galerija</span></div>
+    <h1 style="margin:0 0 10px;font-size:40px;font-weight:800;letter-spacing:-.02em">Galerija</h1>
+    <p style="margin:0;font-size:16px;color:#6B6B6B;max-width:560px;line-height:1.6">Fotografije sa naših putovanja - snimili putnici i pratioci, bez filtera.</p>
+  </div>
+
+  <div style="padding:28px 48px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-bottom:1px solid rgba(0,0,0,.08)">
+    <span style="background:#3B3B3B;color:#fff;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px">Sve</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Tajland - jan 2026</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Zanzibar - feb 2026</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Bali - mar 2026</span>
+    <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Kuba - mar 2026</span>
+  </div>
+
+  <!-- mozaik -->
+  <div style="padding:36px 48px 64px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px">
+    <div style="position:relative;grid-column:span 2;grid-row:span 2;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80" alt="Tajland, zaliv" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Tajland - jan 2026</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=700&q=80" alt="Zanzibar plaža" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Zanzibar</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&q=80" alt="Bali, pirinčane terase" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Bali</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=700&q=80" alt="Havana" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Kuba</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=700&q=80" alt="Maldivi, molo" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Maldivi</span>
+    </div>
+    <div style="position:relative;grid-column:span 2;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&q=80" alt="Plaža sa ležaljkama" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Tenerife</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=700&q=80" alt="Hram na vodi" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Tajland</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=700&q=80" alt="Vijetnam" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Vijetnam</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Dubai" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Dubai</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Tropska plaža" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Šri Lanka</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700&q=80" alt="Hotel sa bazenom" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Naši hoteli</span>
+    </div>
+    <div style="position:relative;border-radius:4px;overflow:hidden">
+      <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=700&q=80" alt="Bali kapija" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <span style="position:absolute;left:14px;bottom:14px;background:rgba(35,38,40,.75);color:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:3px">Bali</span>
+    </div>
+  </div>
+
+  <div style="background:#3B3B3B;color:#B9B9B9;padding:36px 48px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:20px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+    <div style="display:flex;gap:28px;font-size:13.5px">
+      <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">Putovanja</a>
+      <a href="upoznajte-zemlju.html" style="color:#B9B9B9" style-hover="color:#fff">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#B9B9B9" style-hover="color:#fff">Galerija</a>
+      <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Kontakt</a>
+    </div>
+    <div style="font-size:13px">© 2026 · Licenca OTP 123/2025 · Beograd</div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

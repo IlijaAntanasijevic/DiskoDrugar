@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFBF9;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div data-screen-label="Početna">
+
+  <!-- topbar -->
+  <div style="background:#3B3B3B;color:#D9D9D9;font-size:12.5px;display:flex;justify-content:space-between;padding:8px 48px">
+    <span>Radnim danima 09–17h · Subotom 10–14h</span>
+    <div style="display:flex;gap:24px"><span>011 40 88 297</span><span>info@diskodrugarputovanja.rs</span><a href="admin-dashboard.html" style="color:#8A8A8A">Admin</a></div>
+  </div>
+
+  <!-- nav -->
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:14px 48px">
+    <a href="index.html"><img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:46px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:600">
+      <a href="putovanja.html" style="color:#3B3B3B">Putovanja</a>
+      <a href="putovanja.html" style="color:#3B3B3B">Destinacije</a>
+      <a href="last-minute.html" style="color:#2E97AB">Last minute</a>
+      <a href="upoznajte-zemlju.html" style="color:#3B3B3B">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#3B3B3B">Galerija</a>
+      <a href="kontakt.html" style="color:#3B3B3B">Kontakt</a>
+      <a href="kontakt.html" style="background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700" style-hover="background:#2E97AB;color:#fff">Pošalji upit</a>
+    </nav>
+  </div>
+
+  <!-- hero -->
+  <div style="position:relative;height:640px;overflow:hidden">
+    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=2000&q=80" alt="Tajland, zaliv sa tradicionalnim čamcem" style="width:100%;height:100%;object-fit:cover;display:block">
+    <div style="position:absolute;inset:0;background:linear-gradient(75deg,rgba(35,38,40,.78) 0%,rgba(35,38,40,.35) 48%,rgba(35,38,40,0) 70%)"></div>
+    <div style="position:absolute;left:48px;bottom:72px;max-width:680px;color:#fff">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;color:#7FD4E2;margin-bottom:18px">EGZOTIČNE DESTINACIJE · SRPSKI PRATILAC · MALE GRUPE</div>
+      <h1 style="margin:0 0 18px;font-size:58px;line-height:1.06;font-weight:800;letter-spacing:-.02em">Zima je lepša<br>na 30 stepeni.</h1>
+      <p style="margin:0 0 28px;font-size:18px;line-height:1.55;color:rgba(255,255,255,.88);max-width:480px">Tajland, Zanzibar, Bali, Kuba... Zimski termini su otvoreni - prvi putnici nose najbolje cene.</p>
+      <div style="display:flex;gap:14px">
+        <a href="putovanja.html" style="background:#3AAFC4;color:#fff;padding:15px 28px;border-radius:4px;font-weight:700;font-size:15.5px" style-hover="background:#2E97AB;color:#fff">Pogledaj zimske termine</a>
+        <a href="kontakt.html" style="border:1.5px solid rgba(255,255,255,.65);color:#fff;padding:15px 28px;border-radius:4px;font-weight:600;font-size:15.5px" style-hover="background:rgba(255,255,255,.12);color:#fff">Pošalji upit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- destinacije traka -->
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.08);padding:22px 48px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#8A8A8A;margin-right:8px">DESTINACIJE</span>
+    <a href="putovanje-tajland.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Tajland</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Zanzibar</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Bali</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Kuba</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Maldivi</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Tenerife</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Vijetnam</a>
+    <a href="putovanja.html" style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13.5px;font-weight:600;padding:8px 16px;border-radius:4px" style-hover="border:1px solid #3AAFC4;color:#2E97AB">Dubai</a>
+    <a href="putovanja.html" style="font-size:13.5px;font-weight:700;color:#2E97AB;padding:8px 4px">Sve destinacije →</a>
+  </div>
+
+  <!-- izdvojena putovanja -->
+  <div style="padding:64px 48px 24px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:30px">
+      <h2 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-.01em">Izdvojena putovanja</h2>
+      <a href="putovanja.html" style="font-size:14.5px;font-weight:700">Sva putovanja →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+
+      <a href="putovanje-tajland.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+        <div style="position:relative"><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80" alt="Tajland" style="width:100%;height:230px;object-fit:cover;display:block"><span style="position:absolute;top:12px;left:12px;background:#3B3B3B;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">AKCIJA −400 €</span></div>
+        <div style="padding:18px 20px 20px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">TAJLAND · PUKET</div>
+          <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Tajland - plaže i hramovi</div>
+          <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">13–14 dana · avionom · 7 termina okt–mar</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+            <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.399 €</span></div>
+            <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+        <div style="position:relative"><img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=800&q=80" alt="Zanzibar" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+        <div style="padding:18px 20px 20px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">TANZANIJA · ZANZIBAR</div>
+          <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Zanzibar - začinsko ostrvo</div>
+          <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">10 dana · avionom · 5 termina nov–feb</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+            <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.199 €</span></div>
+            <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+        <div style="position:relative"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80" alt="Bali" style="width:100%;height:230px;object-fit:cover;display:block"><span style="position:absolute;top:12px;left:12px;background:#3AAFC4;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">FIRST MINUTE</span></div>
+        <div style="padding:18px 20px 20px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">INDONEZIJA · BALI</div>
+          <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Bali - ostrvo bogova</div>
+          <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">12 dana · avionom · 4 termina jan–apr</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+            <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.499 €</span></div>
+            <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+        <div style="position:relative"><img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80" alt="Kuba" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+        <div style="padding:18px 20px 20px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">KARIBI · KUBA</div>
+          <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Kuba - Havana i Varadero</div>
+          <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">14 dana · avionom · 3 termina jan–mar</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+            <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.799 €</span></div>
+            <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="putovanja.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+        <div style="position:relative"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80" alt="Maldivi" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+        <div style="padding:18px 20px 20px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">MALDIVI</div>
+          <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Maldivi - plavo do horizonta</div>
+          <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">9 dana · avionom · 4 termina dec–mar</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+            <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">1.699 €</span></div>
+            <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="last-minute.html" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;display:block;color:inherit" style-hover="border:1px solid #3AAFC4;color:inherit">
+        <div style="position:relative"><img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80" alt="Tenerife" style="width:100%;height:230px;object-fit:cover;display:block"><span style="position:absolute;top:12px;left:12px;background:#3AAFC4;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">LAST MINUTE</span></div>
+        <div style="padding:18px 20px 20px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">ŠPANIJA · TENERIFE</div>
+          <div style="font-size:18.5px;font-weight:700;margin-bottom:6px">Tenerife - večno proleće</div>
+          <div style="font-size:13.5px;color:#8A8A8A;margin-bottom:14px">8 dana · avionom · 2 termina nov–dec</div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid rgba(0,0,0,.08);padding-top:14px">
+            <div><span style="font-size:12.5px;color:#8A8A8A">od </span><span style="font-size:21px;font-weight:800">899 €</span></div>
+            <span style="font-size:13.5px;font-weight:700;color:#2E97AB">Detaljnije →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- upit CTA -->
+  <div style="padding:24px 48px 64px">
+    <div style="background:#E5F4F7;border:1px solid rgba(58,175,196,.35);border-radius:4px;display:flex;align-items:center;justify-content:space-between;padding:26px 32px">
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#2E97AB;margin-bottom:6px">NISTE SIGURNI KUDA?</div>
+        <div style="font-size:19px;font-weight:700">Pošaljite upit - odgovaramo u roku od 24h, bez obaveze.</div>
+      </div>
+      <a href="kontakt.html" style="background:#3B3B3B;color:#fff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px" style-hover="background:#2E2E2E;color:#fff">Pošalji upit</a>
+    </div>
+  </div>
+
+  <!-- zašto mi -->
+  <div style="background:#fff;border-top:1px solid rgba(0,0,0,.08);border-bottom:1px solid rgba(0,0,0,.08);padding:56px 48px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px">
+      <div style="border-left:none;padding-right:20px">
+        <div style="width:34px;height:3px;background:#3AAFC4;margin-bottom:18px"></div>
+        <div style="font-size:17px;font-weight:700;margin-bottom:8px">Srpski pratilac na svakom putovanju</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B6B6B">Od aerodroma do povratka - naš čovek je uz grupu sve vreme. Bez snalaženja, bez jezičke barijere.</p>
+      </div>
+      <div style="padding-right:20px">
+        <div style="width:34px;height:3px;background:#3AAFC4;margin-bottom:18px"></div>
+        <div style="font-size:17px;font-weight:700;margin-bottom:8px">Male grupe, provereni hoteli</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B6B6B">Putujemo u grupama do 25 ljudi i biramo smeštaj u kome smo i sami odseli. Program koji ne juri - nego uživa.</p>
+      </div>
+      <div style="padding-right:20px">
+        <div style="width:34px;height:3px;background:#3AAFC4;margin-bottom:18px"></div>
+        <div style="font-size:17px;font-weight:700;margin-bottom:8px">Plaćanje u ratama, bez skrivenih troškova</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B6B6B">Rezervacija uz depozit, ostatak do polaska. Cena obuhvata sve što piše u programu - crno na belo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- blog -->
+  <div style="padding:64px 48px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:30px">
+      <h2 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-.01em">Upoznajte zemlju</h2>
+      <a href="upoznajte-zemlju.html" style="font-size:14.5px;font-weight:700">Svi tekstovi →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <a href="blog-tajland.html" style="display:block;color:inherit" style-hover="color:inherit">
+        <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&q=80" alt="Tajlandska kuhinja" style="width:100%;height:210px;object-fit:cover;display:block;border-radius:4px;margin-bottom:14px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">TAJLAND</div>
+        <div style="font-size:17.5px;font-weight:700;line-height:1.35;margin-bottom:6px">Šta se jede na Puketu: od Pad Thai-a do Mango Sticky Rice-a</div>
+        <div style="font-size:13px;color:#8A8A8A">8 min čitanja</div>
+      </a>
+      <a href="upoznajte-zemlju.html" style="display:block;color:inherit" style-hover="color:inherit">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80" alt="Bali kapija hrama" style="width:100%;height:210px;object-fit:cover;display:block;border-radius:4px;margin-bottom:14px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">BALI</div>
+        <div style="font-size:17.5px;font-weight:700;line-height:1.35;margin-bottom:6px">Bali van plaže: hramovi, pirinčane terase i ceremonije</div>
+        <div style="font-size:13px;color:#8A8A8A">6 min čitanja</div>
+      </a>
+      <a href="upoznajte-zemlju.html" style="display:block;color:inherit" style-hover="color:inherit">
+        <img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=800&q=80" alt="Havana, stari automobil" style="width:100%;height:210px;object-fit:cover;display:block;border-radius:4px;margin-bottom:14px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#2E97AB;margin-bottom:6px">KUBA</div>
+        <div style="font-size:17.5px;font-weight:700;line-height:1.35;margin-bottom:6px">Havana za početnike: šta videti za tri dana</div>
+        <div style="font-size:13px;color:#8A8A8A">7 min čitanja</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- galerija traka -->
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Plaža" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=600&q=80" alt="Maldivi molo" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="Ležaljke na plaži" style="width:100%;height:190px;object-fit:cover;display:block">
+    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80" alt="Vijetnam" style="width:100%;height:190px;object-fit:cover;display:block">
+    <div style="position:relative">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai" style="width:100%;height:190px;object-fit:cover;display:block">
+      <a href="galerija.html" style="position:absolute;inset:0;background:rgba(35,38,40,.62);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700" style-hover="background:rgba(35,38,40,.5);color:#fff">Otvori galeriju →</a>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#3B3B3B;color:#B9B9B9;padding:52px 48px 0">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:44px">
+      <div>
+        <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:14px">disko drugar<span style="color:#3AAFC4">.</span></div>
+        <p style="margin:0;font-size:13.5px;line-height:1.65;max-width:300px">Turistička agencija za egzotične destinacije. Male grupe, srpski pratilac i putovanja koja se pamte - od 2015.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#8A8A8A;margin-bottom:4px">PONUDA</div>
+        <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">Sva putovanja</a>
+        <a href="last-minute.html" style="color:#B9B9B9" style-hover="color:#fff">Last minute</a>
+        <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">First minute</a>
+        <a href="galerija.html" style="color:#B9B9B9" style-hover="color:#fff">Galerija</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#8A8A8A;margin-bottom:4px">AGENCIJA</div>
+        <a href="upoznajte-zemlju.html" style="color:#B9B9B9" style-hover="color:#fff">Upoznajte zemlju</a>
+        <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Kontakt</a>
+        <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Uslovi putovanja</a>
+        <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Garancija putovanja</a>
+      </div>
+      <div style="font-size:13.5px;line-height:1.8">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;color:#8A8A8A;margin-bottom:8px">KONTAKT</div>
+        <div style="color:#E8E8E8">011 40 88 297</div>
+        <div>info@diskodrugarputovanja.rs</div>
+        <div>Bulevar kralja Aleksandra 12, Beograd</div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.12);padding:18px 0;display:flex;justify-content:space-between;font-size:12.5px;color:#8A8A8A">
+      <span>© 2026 Disko Drugar Putovanja · Licenca OTP 123/2025 · <a href="mobilni-prikaz.html" style="color:#8A8A8A">Mobilni prikaz</a></span>
+      <span>Instagram · Facebook · TikTok</span>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

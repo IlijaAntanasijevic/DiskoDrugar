@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F2EE;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div style="display:grid;grid-template-columns:232px 1fr;min-height:100vh" data-screen-label="Admin - Rezervacije i uplate">
+
+  <!-- sidebar -->
+  <div style="background:#3B3B3B;color:#B9B9B9;display:flex;flex-direction:column;padding:22px 0">
+    <div style="padding:0 22px 22px;border-bottom:1px solid rgba(255,255,255,.1)">
+      <div style="font-size:17px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+      <div style="font-size:11px;letter-spacing:.1em;color:#8A8A8A;margin-top:3px">ADMIN CMS</div>
+    </div>
+    <nav style="display:flex;flex-direction:column;padding:14px 12px;gap:2px;font-size:14px;font-weight:600">
+      <a href="admin-dashboard.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Dashboard</a>
+      <a href="admin-putovanja.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Putovanja</a>
+      <a href="admin-rezervacije.html" style="color:#fff;background:rgba(58,175,196,.22);border-left:3px solid #3AAFC4;padding:11px 16px;border-radius:0 4px 4px 0">Rezervacije i uplate</a>
+      <a href="admin-upiti.html" style="color:#B9B9B9;padding:11px 19px;display:flex;justify-content:space-between;align-items:center" style-hover="color:#fff"><span>Upiti</span><span style="background:#3AAFC4;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:9px">7</span></a>
+      <a href="admin-medija.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Medija</a>
+      <span style="color:#6E6E6E;padding:11px 19px">Blog</span>
+      <span style="color:#6E6E6E;padding:11px 19px">Podešavanja</span>
+    </nav>
+    <div style="margin-top:auto;padding:18px 22px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px">
+      <span style="width:32px;height:32px;border-radius:50%;background:#3AAFC4;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px">D</span>
+      <div><div style="font-size:13px;font-weight:700;color:#E8E8E8">Dragan</div><div style="font-size:11.5px;color:#8A8A8A">Vlasnik · 2FA aktivan</div></div>
+    </div>
+    <a href="index.html" style="margin:14px 22px 0;font-size:12.5px;color:#8A8A8A" style-hover="color:#fff">← Nazad na sajt</a>
+  </div>
+
+  <!-- main -->
+  <div style="padding:30px 34px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+      <div>
+        <h1 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em">Rezervacije i uplate</h1>
+        <div style="font-size:13px;color:#8A8A8A;margin-top:3px">Termin: Tajland · 04. jan – 16. jan 2027. · 25/25 mesta</div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <span style="border:1px solid rgba(0,0,0,.18);color:#3B3B3B;padding:10px 18px;border-radius:4px;font-weight:600;font-size:13.5px;background:#fff">Izvezi XLSX</span>
+        <span style="background:#3AAFC4;color:#fff;padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px">+ Nova rezervacija</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:14px;align-items:start">
+
+      <!-- lista rezervacija -->
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;padding:13px 20px;background:#FCFBF9;gap:10px">
+          <span>NOSILAC · PUTNICI</span><span>UGOVORENO</span><span>UPLAĆENO</span><span>STATUS</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;padding:14px 20px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center;background:#E5F4F7;border-left:3px solid #3AAFC4">
+          <div><div style="font-weight:700">Jelena Petrović</div><div style="font-size:12px;color:#8A8A8A">2 putnika · R-2027-014</div></div>
+          <span style="font-weight:600">3.798 €</span>
+          <span style="font-weight:600">2.400 €</span>
+          <span><span style="background:#FDF3E1;color:#9A6B1F;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Delimično</span></span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;padding:14px 20px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <div><div style="font-weight:700">Miloš i Sara Đorđević</div><div style="font-size:12px;color:#8A8A8A">2 putnika · R-2027-013</div></div>
+          <span style="font-weight:600">3.798 €</span>
+          <span style="font-weight:600">3.798 €</span>
+          <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Plaćeno</span></span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;padding:14px 20px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <div><div style="font-weight:700">Porodica Ilić</div><div style="font-size:12px;color:#8A8A8A">4 putnika · R-2027-011</div></div>
+          <span style="font-weight:600">6.796 €</span>
+          <span style="font-weight:600">800 €</span>
+          <span><span style="background:#FDF3E1;color:#9A6B1F;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Depozit</span></span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;padding:14px 20px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <div><div style="font-weight:700">Ana Kovačević</div><div style="font-size:12px;color:#8A8A8A">1 putnik · R-2027-009</div></div>
+          <span style="font-weight:600">2.289 €</span>
+          <span style="font-weight:600">2.289 €</span>
+          <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Plaćeno</span></span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;padding:14px 20px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <div><div style="font-weight:700;color:#8A8A8A;text-decoration:line-through">Petar Simić</div><div style="font-size:12px;color:#8A8A8A">2 putnika · R-2027-006</div></div>
+          <span style="font-weight:600;color:#8A8A8A">3.798 €</span>
+          <span style="font-weight:600;color:#8A8A8A">0 €</span>
+          <span><span style="background:#F7E7E4;color:#B05252;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Otkazano</span></span>
+        </div>
+
+        <div style="padding:14px 20px;border-top:1px solid rgba(0,0,0,.05);background:#FCFBF9;display:flex;justify-content:space-between;font-size:13px">
+          <span style="color:#8A8A8A">Ukupno za termin</span>
+          <span style="font-weight:700">Ugovoreno 43.480 € · Uplaćeno 31.260 € (72%)</span>
+        </div>
+      </div>
+
+      <!-- detalj rezervacije -->
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden">
+        <div style="padding:18px 22px;border-bottom:1px solid rgba(0,0,0,.06)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2px">
+            <div style="font-size:15px;font-weight:700">R-2027-014 · Jelena Petrović</div>
+            <span style="background:#FDF3E1;color:#9A6B1F;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Delimično</span>
+          </div>
+          <div style="font-size:12.5px;color:#8A8A8A">Tajland · 04. jan – 16. jan · promo nivo · kreirana 03. jun 2026.</div>
+        </div>
+
+        <div style="padding:16px 22px;border-bottom:1px solid rgba(0,0,0,.06)">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;margin-bottom:10px">PUTNICI</div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:13.5px">
+            <div style="display:flex;justify-content:space-between"><span style="font-weight:600">Jelena Petrović</span><span style="color:#8A8A8A">nosilac · pasoš ✓</span></div>
+            <div style="display:flex;justify-content:space-between"><span style="font-weight:600">Marko Petrović</span><span style="color:#8A8A8A">putnik · pasoš ✓</span></div>
+          </div>
+        </div>
+
+        <div style="padding:16px 22px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A">UPLATE</div>
+            <span style="font-size:12.5px;font-weight:700;color:#2E97AB">+ Nova uplata</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1px;border:1px solid rgba(0,0,0,.08);border-radius:4px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:11px 14px;font-size:13px;background:#FCFBF9;gap:8px;align-items:center">
+              <span style="color:#6B6B6B">03. jun 2026.</span><span style="font-weight:700">400 €</span><span style="color:#8A8A8A;text-align:right">depozit · gotovina</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:11px 14px;font-size:13px;background:#FCFBF9;gap:8px;align-items:center;border-top:1px solid rgba(0,0,0,.06)">
+              <span style="color:#6B6B6B">01. jul 2026.</span><span style="font-weight:700">117.200 RSD</span><span style="color:#8A8A8A;text-align:right">rata · kurs 117,2</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:11px 14px;font-size:13px;background:#FCFBF9;gap:8px;align-items:center;border-top:1px solid rgba(0,0,0,.06)">
+              <span style="color:#6B6B6B">10. jul 2026.</span><span style="font-weight:700">1.000 €</span><span style="color:#8A8A8A;text-align:right">rata · uplatnica</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;padding:11px 14px;font-size:13px;background:#FBF6F5;gap:8px;align-items:center;border-top:1px solid rgba(0,0,0,.06)">
+              <span style="color:#B05252;text-decoration:line-through">05. jul 2026.</span><span style="font-weight:700;color:#B05252;text-decoration:line-through">200 €</span><span style="color:#B05252;text-align:right;font-size:12px">STORNO · pogrešan iznos</span>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:14px;font-size:13.5px">
+            <span style="color:#6B6B6B">Preostalo za uplatu</span><span style="font-weight:800">1.398 €</span>
+          </div>
+          <div style="height:6px;background:#EDEAE4;border-radius:3px;margin-top:10px;overflow:hidden"><div style="width:63%;height:100%;background:#3AAFC4"></div></div>
+          <div style="background:#FCFBF9;border:1px solid rgba(0,0,0,.08);border-radius:4px;padding:12px 14px;font-size:12px;color:#8A8A8A;line-height:1.6;margin-top:16px">Uplate se nikad ne brišu ni menjaju - samo storno uz razlog. Status rezervacije je izveden iz zbira važećih uplata.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

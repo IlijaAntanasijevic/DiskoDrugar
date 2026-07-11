@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FCFBF9;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+details[open] .acc-chev{transform:rotate(180deg)}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div data-screen-label="Putovanje - Tajland detalj">
+
+  <div style="background:#3B3B3B;color:#D9D9D9;font-size:12.5px;display:flex;justify-content:space-between;padding:8px 48px">
+    <span>Radnim danima 09–17h · Subotom 10–14h</span>
+    <div style="display:flex;gap:24px"><span>011 40 88 297</span><span>info@diskodrugarputovanja.rs</span></div>
+  </div>
+
+  <div style="background:#fff;border-bottom:1px solid rgba(0,0,0,.1);display:flex;align-items:center;justify-content:space-between;padding:14px 48px">
+    <a href="index.html"><img src="assets/logo.png" alt="Disko Drugar Putovanja" style="height:46px;display:block"></a>
+    <nav style="display:flex;gap:30px;align-items:center;font-size:14.5px;font-weight:600">
+      <a href="putovanja.html" style="color:#2E97AB">Putovanja</a>
+      <a href="putovanja.html" style="color:#3B3B3B">Destinacije</a>
+      <a href="last-minute.html" style="color:#3B3B3B">Last minute</a>
+      <a href="upoznajte-zemlju.html" style="color:#3B3B3B">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#3B3B3B">Galerija</a>
+      <a href="kontakt.html" style="color:#3B3B3B">Kontakt</a>
+      <a href="kontakt.html" style="background:#3AAFC4;color:#fff;padding:11px 22px;border-radius:4px;font-weight:700" style-hover="background:#2E97AB;color:#fff">Pošalji upit</a>
+    </nav>
+  </div>
+
+  <!-- foto mozaik -->
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:2px">
+    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1400&q=80" alt="Tajland, zaliv" style="grid-row:span 2;width:100%;height:100%;object-fit:cover;display:block">
+    <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=700&q=80" alt="Hram na vodi" style="width:100%;height:100%;object-fit:cover;display:block">
+    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=80" alt="Plaža" style="width:100%;height:100%;object-fit:cover;display:block">
+    <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=700&q=80" alt="Pad Thai" style="width:100%;height:100%;object-fit:cover;display:block">
+    <div style="position:relative">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Plaža sa palmama" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0">
+      <a href="galerija.html" style="position:absolute;inset:0;background:rgba(35,38,40,.6);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14.5px;font-weight:700" style-hover="background:rgba(35,38,40,.48);color:#fff">+ 38 fotografija</a>
+    </div>
+  </div>
+
+  <!-- naslov -->
+  <div style="padding:40px 48px 0">
+    <div style="font-size:12.5px;color:#8A8A8A;margin-bottom:14px"><a href="index.html" style="color:#8A8A8A">Početna</a> / <a href="putovanja.html" style="color:#8A8A8A">Putovanja</a> / <span style="color:#3B3B3B;font-weight:600">Tajland</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+      <div>
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+          <span style="background:#3B3B3B;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">AKCIJA −400 €</span>
+          <span style="background:#E5F4F7;color:#2E97AB;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:5px 10px;border-radius:3px">ZIMA 2027</span>
+        </div>
+        <h1 style="margin:0 0 10px;font-size:42px;font-weight:800;letter-spacing:-.02em">Tajland - plaže i hramovi</h1>
+        <div style="font-size:15px;color:#6B6B6B">Puket · Patong Beach · 13–14 dana · avionom preko Istanbula · srpski pratilac</div>
+      </div>
+      <div style="text-align:right;padding-bottom:4px">
+        <div style="font-size:13px;color:#8A8A8A;margin-bottom:2px">već od</div>
+        <div style="font-size:36px;font-weight:800;letter-spacing:-.02em">1.399 €</div>
+        <div style="font-size:13px;color:#8A8A8A">po osobi, avio-prevoz uključen</div>
+      </div>
+    </div>
+
+    <!-- sekcijska navigacija -->
+    <div style="display:flex;gap:26px;border-bottom:1px solid rgba(0,0,0,.1);margin-top:30px;font-size:14.5px;font-weight:600">
+      <a href="#termini" style="color:#2E97AB;padding:14px 2px;border-bottom:2.5px solid #3AAFC4">Termini i cene</a>
+      <a href="#program" style="color:#3B3B3B;padding:14px 2px">Plan i program</a>
+      <a href="#fakultative" style="color:#3B3B3B;padding:14px 2px">Fakultativni izleti</a>
+      <a href="#smestaj" style="color:#3B3B3B;padding:14px 2px">Smeštaj</a>
+      <a href="#napomene" style="color:#3B3B3B;padding:14px 2px">Cena obuhvata</a>
+    </div>
+  </div>
+
+  <!-- glavni layout -->
+  <div style="display:grid;grid-template-columns:1fr 360px;gap:40px;padding:40px 48px 64px;align-items:start">
+
+    <div>
+      <p style="margin:0 0 40px;font-size:16px;line-height:1.7;color:#5A5A5A;max-width:720px">Trinaest dana na najlepšim plažama Andamanskog mora, uz hramove, tajlandsku kuhinju i izlete koji se dugo prepričavaju. Smeštaj u srcu Patong Beach-a, let iz Beograda sa jednim presedanjem u Istanbulu.</p>
+
+      <!-- TERMINI -->
+      <h2 id="termini" style="margin:0 0 20px;font-size:26px;font-weight:800;letter-spacing:-.01em">Termini i cene</h2>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;margin-bottom:14px">
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;background:#F4F2EE;font-size:11.5px;font-weight:700;letter-spacing:.08em;color:#6B6B6B;padding:12px 20px;gap:10px">
+          <span>TERMIN</span><span>TRAJANJE</span><span>PROMO</span><span>FIRST MINUTE</span><span>REGULAR</span><span style="text-align:right">AKCIJA</span>
+        </div>
+        <div style="background:#FCFBF9;font-size:12px;font-weight:700;letter-spacing:.1em;color:#2E97AB;padding:10px 20px;border-top:1px solid rgba(0,0,0,.06)">JESENJI TERMINI</div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">25. okt – 06. nov</span><span style="color:#6B6B6B">13 dana</span><span style="font-weight:700">1.399 €</span><span>1.499 €</span><span>1.599 €</span><span style="text-align:right;color:#B0B0B0">-</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">15. nov – 27. nov</span><span style="color:#6B6B6B">13 dana</span><span style="font-weight:700">1.499 €</span><span>1.599 €</span><span>1.699 €</span><span style="text-align:right;color:#B0B0B0">-</span>
+        </div>
+        <div style="background:#FCFBF9;font-size:12px;font-weight:700;letter-spacing:.1em;color:#2E97AB;padding:10px 20px;border-top:1px solid rgba(0,0,0,.06)">ZIMSKI TERMINI</div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">04. jan – 16. jan</span><span style="color:#6B6B6B">13 dana</span><span>2.099 €</span><span>2.199 €</span><span style="text-decoration:line-through;color:#A0A0A0">2.299 €</span><span style="text-align:right"><span style="background:#3B3B3B;color:#fff;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:3px">1.899 €</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">12. jan – 24. jan</span><span style="color:#6B6B6B">13 dana</span><span>1.799 €</span><span>1.899 €</span><span style="text-decoration:line-through;color:#A0A0A0">1.999 €</span><span style="text-align:right"><span style="background:#3B3B3B;color:#fff;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:3px">1.599 €</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">26. jan – 08. feb</span><span style="color:#6B6B6B">14 dana</span><span style="font-weight:700">1.699 €</span><span>1.799 €</span><span>1.899 €</span><span style="text-align:right;color:#B0B0B0">-</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">12. feb – 24. feb</span><span style="color:#6B6B6B">13 dana</span><span>1.699 €</span><span>1.799 €</span><span style="text-decoration:line-through;color:#A0A0A0">1.899 €</span><span style="text-align:right"><span style="background:#3B3B3B;color:#fff;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:3px">1.599 €</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.6fr .7fr 1fr 1fr 1fr 1.1fr;font-size:14.5px;padding:15px 20px;gap:10px;border-top:1px solid rgba(0,0,0,.06);align-items:center">
+          <span style="font-weight:700">19. feb – 04. mar</span><span style="color:#6B6B6B">14 dana</span><span style="font-weight:700">1.599 €</span><span>1.699 €</span><span>1.799 €</span><span style="text-align:right;color:#B0B0B0">-</span>
+        </div>
+      </div>
+      <p style="margin:0 0 48px;font-size:13px;color:#8A8A8A;line-height:1.6">Promo cena važi za prvih 10 prijavljenih po terminu, first minute do 60 dana pred polazak. Akcijska cena važi do popune mesta. Cene su po osobi u 1/2 sobi.</p>
+
+      <!-- PROGRAM -->
+      <h2 id="program" style="margin:0 0 20px;font-size:26px;font-weight:800;letter-spacing:-.01em">Plan i program</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:48px">
+
+        <details open="{{ true }}" style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 1</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Beograd – Istanbul</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Sastanak na aerodromu „Nikola Tesla" u dogovoreno vreme. Krećemo ka Tajlandu, zemlji budizma i rajskih plaža. Let do Puketa sa presedanjem u Istanbulu. Nastavak leta ka Tajlandu.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 2</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Istanbul – Phuket</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Sletanje na Puket u popodnevnim časovima. Organizovan transfer do hotela na Puketu gde ćemo da odmaramo i uživamo na prelepim plažama. Smeštaj u hotelu u Patong Beach-u. Upoznavanje sa okolinom i lokalnom kuhinjom Tajlanda. Predlažemo da u slobodno vreme probate Pad Thai, simbol tajlandske gastronomije, neodoljiva kombinacija slatkih, slanih i blago kiselkastih ukusa. Tu je i nezaobilazni Mango Sticky Rice, jednostavan, a savršen dezert. Noćenje.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 3</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Phuket - Patong Beach</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Doručak. Slobodan dan za uživanje na Patong plaži - tri kilometra svetlog peska i tople vode. U večernjim satima predlažemo šetnju ulicom Bangla Road i obilazak noćne pijace, gde se za par evra jede bolje nego u mnogim restoranima. Noćenje.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 4</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Phi Phi ostrva (fakultativno)</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Doručak. Fakultativni celodnevni izlet brodom na čuvena Phi Phi ostrva - Maya Bay (poznat iz filma „Plaža"), laguna Pileh i plivanje sa maskom iznad koralnog grebena. Ručak na brodu uključen. Povratak u hotel u kasnim popodnevnim satima. Noćenje.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 5</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Veliki Buda i Wat Chalong</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Doručak. Poludnevni obilazak juga ostrva: Veliki Buda od belog mermera visok 45 metara, sa koga se pruža najlepši pogled na Puket, i hram Wat Chalong - duhovno srce ostrva. Popodne slobodno za plažu. Noćenje.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 6</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Zaliv Phang Nga - „James Bond" ostrvo (fakultativno)</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Doručak. Fakultativni izlet u zaliv Phang Nga: vožnja kanuom kroz pećine i mangrove, čuveno „James Bond" ostrvo Khao Phing Kan i ručak u plutajućem muslimanskom selu Koh Panyee. Noćenje.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 7–11</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Slobodni dani - plaže, masaže i izleti po želji</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Doručak. Dani predviđeni za odmor po sopstvenom ritmu: plaže Kata, Karon i Freedom Beach, tajlandska masaža, kuvarski čas ili neki od preostalih fakultativnih izleta - safari na slonovima u etičkom utočištu, Similan ostrva ili večernji šou Simon Cabaret. Naš pratilac je sve vreme na raspolaganju za preporuke i organizaciju. Noćenje.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 12</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Phuket – Istanbul</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Doručak i odjava iz hotela. Slobodno vreme do polaska, zatim organizovan transfer do aerodroma. Let za Istanbul u večernjim časovima. Noćenje u avionu.</p>
+          </div>
+        </details>
+
+        <details style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px">
+          <summary style="display:flex;align-items:center;gap:16px;padding:18px 20px">
+            <span style="background:#3AAFC4;color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:3px;white-space:nowrap">DAN 13</span>
+            <span style="font-size:16px;font-weight:700;flex:1">Istanbul – Beograd</span>
+            <span class="acc-chev" style="color:#8A8A8A;font-size:13px;transition:transform .15s">▾</span>
+          </summary>
+          <div style="padding:0 20px 20px 20px;border-top:1px solid rgba(0,0,0,.06)">
+            <p style="margin:14px 0 0;font-size:14.5px;line-height:1.7;color:#5A5A5A">Presedanje u Istanbulu i nastavak leta ka Beogradu. Sletanje na aerodrom „Nikola Tesla" u prepodnevnim časovima. Kraj programa.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- FAKULTATIVE -->
+      <h2 id="fakultative" style="margin:0 0 20px;font-size:26px;font-weight:800;letter-spacing:-.01em">Fakultativni izleti</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:48px">
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80" alt="Phi Phi ostrva" style="width:100%;height:150px;object-fit:cover;display:block">
+          <div style="padding:16px 18px 18px">
+            <div style="font-size:15.5px;font-weight:700;margin-bottom:4px">Phi Phi ostrva + Maya Bay</div>
+            <div style="font-size:13px;color:#8A8A8A;margin-bottom:12px">Celodnevni · brodom · ručak uključen</div>
+            <div style="font-size:17px;font-weight:800">45 €</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&q=80" alt="Phang Nga zaliv" style="width:100%;height:150px;object-fit:cover;display:block">
+          <div style="padding:16px 18px 18px">
+            <div style="font-size:15.5px;font-weight:700;margin-bottom:4px">Phang Nga - James Bond ostrvo</div>
+            <div style="font-size:13px;color:#8A8A8A;margin-bottom:12px">Celodnevni · kanu kroz pećine</div>
+            <div style="font-size:17px;font-weight:800">40 €</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Similan ostrva" style="width:100%;height:150px;object-fit:cover;display:block">
+          <div style="padding:16px 18px 18px">
+            <div style="font-size:15.5px;font-weight:700;margin-bottom:4px">Similan ostrva - snorkeling</div>
+            <div style="font-size:13px;color:#8A8A8A;margin-bottom:12px">Celodnevni · oprema uključena</div>
+            <div style="font-size:17px;font-weight:800">55 €</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMEŠTAJ -->
+      <h2 id="smestaj" style="margin:0 0 20px;font-size:26px;font-weight:800;letter-spacing:-.01em">Smeštaj</h2>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;overflow:hidden;margin-bottom:48px">
+        <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:2px">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80" alt="Hotel bazen" style="width:100%;height:280px;object-fit:cover;display:block">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=700&q=80" alt="Hotelska soba" style="width:100%;height:280px;object-fit:cover;display:block">
+        </div>
+        <div style="padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px">
+          <div>
+            <div style="font-size:18px;font-weight:700;margin-bottom:4px">Patong Resort Hotel <span style="color:#3AAFC4">★★★★</span></div>
+            <p style="margin:0;font-size:14px;line-height:1.6;color:#6B6B6B;max-width:560px">Na 400 m od Patong plaže. Sobe sa klimom, TV-om i sefom; tri bazena u sklopu hotela. Doručak na bazi švedskog stola uključen u cenu.</p>
+          </div>
+          <span style="border:1.5px solid #3B3B3B;color:#3B3B3B;padding:12px 22px;border-radius:4px;font-weight:700;font-size:14px;white-space:nowrap">Više o hotelu</span>
+        </div>
+      </div>
+
+      <!-- NAPOMENE -->
+      <h2 id="napomene" style="margin:0 0 20px;font-size:26px;font-weight:800;letter-spacing:-.01em">Cena obuhvata</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:22px 24px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#2E97AB;margin-bottom:14px">U CENU JE UKLJUČENO</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.5;color:#5A5A5A">
+            <div style="display:flex;gap:10px"><span style="color:#3AAFC4;font-weight:800">✓</span><span>Avio-prevoz Beograd–Puket–Beograd sa presedanjem</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#3AAFC4;font-weight:800">✓</span><span>11 noćenja sa doručkom u hotelu 4★</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#3AAFC4;font-weight:800">✓</span><span>Svi transferi aerodrom–hotel–aerodrom</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#3AAFC4;font-weight:800">✓</span><span>Obilazak Velikog Bude i hrama Wat Chalong</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#3AAFC4;font-weight:800">✓</span><span>Srpski pratilac tokom celog putovanja</span></div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:22px 24px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#8A8A8A;margin-bottom:14px">NIJE UKLJUČENO</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.5;color:#5A5A5A">
+            <div style="display:flex;gap:10px"><span style="color:#B0B0B0;font-weight:800">-</span><span>Fakultativni izleti (plaćaju se na licu mesta)</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#B0B0B0;font-weight:800">-</span><span>Međunarodno putno zdravstveno osiguranje (od 18 €)</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#B0B0B0;font-weight:800">-</span><span>Obroci koji nisu navedeni programom</span></div>
+            <div style="display:flex;gap:10px"><span style="color:#B0B0B0;font-weight:800">-</span><span>Doplata za 1/1 sobu: 390 €</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sticky sidebar -->
+    <div style="position:sticky;top:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:4px;padding:24px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#2E97AB;margin-bottom:8px">REZERVIŠITE MESTO</div>
+        <div style="font-size:22px;font-weight:800;margin-bottom:4px">od 1.399 € <span style="font-size:13px;font-weight:400;color:#8A8A8A">po osobi</span></div>
+        <div style="font-size:13px;color:#8A8A8A;margin-bottom:18px">Depozit 200 €, ostatak do 15 dana pred put</div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">TERMIN</label>
+            <select value="{{ termin }}" onChange="{{ setTermin }}" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:12px 10px;font-size:14px;color:#3B3B3B;background:#FCFBF9;width:100%;font-family:'Archivo',sans-serif">
+              <option value="25. okt – 06. nov">25. okt – 06. nov · 13 dana · od 1.399 €</option>
+              <option value="15. nov – 27. nov">15. nov – 27. nov · 13 dana · od 1.499 €</option>
+              <option value="04. jan – 16. jan">04. jan – 16. jan · 13 dana · akcija 1.899 €</option>
+              <option value="12. jan – 24. jan">12. jan – 24. jan · 13 dana · akcija 1.599 €</option>
+              <option value="26. jan – 08. feb">26. jan – 08. feb · 14 dana · od 1.699 €</option>
+              <option value="12. feb – 24. feb">12. feb – 24. feb · 13 dana · akcija 1.599 €</option>
+              <option value="19. feb – 04. mar">19. feb – 04. mar · 14 dana · od 1.599 €</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label style="font-size:11px;font-weight:700;letter-spacing:.1em;color:#6B6B6B">BROJ PUTNIKA</label>
+            <select value="{{ putnici }}" onChange="{{ setPutnici }}" style="border:1px solid rgba(0,0,0,.18);border-radius:4px;padding:12px 10px;font-size:14px;color:#3B3B3B;background:#FCFBF9;width:100%;font-family:'Archivo',sans-serif">
+              <option value="1">1 putnik</option>
+              <option value="2">2 putnika</option>
+              <option value="3">3 putnika</option>
+              <option value="4">4 putnika</option>
+              <option value="5">5+ putnika</option>
+            </select>
+          </div>
+        </div>
+        <a href="{{ kontaktHref }}" style="display:block;text-align:center;background:#3AAFC4;color:#fff;padding:15px 0;border-radius:4px;font-weight:700;font-size:15.5px;margin-bottom:10px" style-hover="background:#2E97AB;color:#fff">Pošalji upit za ovaj termin</a>
+        <div style="text-align:center;font-size:12.5px;color:#8A8A8A">Upit vas ni na šta ne obavezuje.</div>
+      </div>
+      <div style="background:#E5F4F7;border:1px solid rgba(58,175,196,.35);border-radius:4px;padding:20px 24px">
+        <div style="font-size:14.5px;font-weight:700;margin-bottom:4px">Radije razgovarate?</div>
+        <div style="font-size:13.5px;color:#5A5A5A;line-height:1.6">Pozovite <span style="font-weight:700;color:#3B3B3B">011 40 88 297</span> radnim danima 09–17h - drugar sa druge strane zna svaki detalj programa.</div>
+      </div>
+      <div style="border:1px solid rgba(0,0,0,.1);border-radius:4px;padding:18px 24px;background:#fff">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#8A8A8A;margin-bottom:10px">POLASCI IZ</div>
+        <div style="font-size:14px;color:#5A5A5A;line-height:1.8">Beograd (aerodrom „Nikola Tesla")<br>Organizovan prevoz iz Novog Sada i Niša uz doplatu</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <div style="background:#3B3B3B;color:#B9B9B9;padding:36px 48px;display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:20px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+    <div style="display:flex;gap:28px;font-size:13.5px">
+      <a href="putovanja.html" style="color:#B9B9B9" style-hover="color:#fff">Putovanja</a>
+      <a href="upoznajte-zemlju.html" style="color:#B9B9B9" style-hover="color:#fff">Upoznajte zemlju</a>
+      <a href="galerija.html" style="color:#B9B9B9" style-hover="color:#fff">Galerija</a>
+      <a href="kontakt.html" style="color:#B9B9B9" style-hover="color:#fff">Kontakt</a>
+    </div>
+    <div style="font-size:13px">© 2026 · Licenca OTP 123/2025 · Beograd</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { termin: '04. jan – 16. jan', putnici: '2' };
+  renderVals() {
+    const kontaktHref = 'kontakt.html'
+      + '?putovanje=' + encodeURIComponent('Tajland - plaže i hramovi')
+      + '&termin=' + encodeURIComponent(this.state.termin)
+      + '&putnici=' + encodeURIComponent(this.state.putnici);
+    return {
+      termin: this.state.termin,
+      putnici: this.state.putnici,
+      setTermin: (e) => this.setState({ termin: e.target.value }),
+      setPutnici: (e) => this.setState({ putnici: e.target.value }),
+      kontaktHref
+    };
+  }
+}
+</script>
+</body>
+</html>

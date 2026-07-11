@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<style>
+@keyframes ddpulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.85}}
+</style>
+</helmet>
+<sc-if value="{{ show }}" hint-placeholder-val="{{ true }}">
+  <div style="position:fixed;inset:0;z-index:99999;background:#3AAFC4;display:flex;align-items:center;justify-content:center;transition:opacity .45s ease;opacity:{{ op }}">
+    <svg viewBox="0 0 1200 800" style="width:min(52vw,560px);height:auto;animation:ddpulse 1.6s ease-in-out infinite">
+      <circle cx="520" cy="380" r="90" fill="none" stroke="#3B3B3B" stroke-width="26"></circle>
+      <circle cx="740" cy="380" r="90" fill="none" stroke="#3B3B3B" stroke-width="26"></circle>
+      <path d="M610 380 h40" stroke="#3B3B3B" stroke-width="26" stroke-linecap="round"></path>
+      <path d="M470 500 q160 90 320 0" stroke="#FCFBF9" stroke-width="26" fill="none" stroke-linecap="round"></path>
+    </svg>
+    <div style="position:absolute;bottom:20px;right:20px;font:13px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#666;background:#fff;padding:8px 14px;border-radius:8px">Učitavanje...</div>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { fading: false, gone: false };
+  componentDidMount() {
+    const start = Date.now();
+    const finish = () => {
+      const wait = Math.max(0, 900 - (Date.now() - start));
+      setTimeout(() => {
+        this.setState({ fading: true });
+        setTimeout(() => this.setState({ gone: true }), 480);
+      }, wait);
+    };
+    if (document.readyState === 'complete') finish();
+    else window.addEventListener('load', finish, { once: true });
+  }
+  renderVals() {
+    return { show: !this.state.gone, op: this.state.fading ? 0 : 1 };
+  }
+}
+</script>
+</body>
+</html>

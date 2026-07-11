@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F2EE;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+input{font-family:'Archivo',sans-serif}
+input:focus{outline:none;border-color:#3AAFC4 !important;box-shadow:0 0 0 3px rgba(58,175,196,.18)}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div style="display:grid;grid-template-columns:232px 1fr;min-height:100vh" data-screen-label="Admin - Putovanja">
+
+  <!-- sidebar -->
+  <div style="background:#3B3B3B;color:#B9B9B9;display:flex;flex-direction:column;padding:22px 0">
+    <div style="padding:0 22px 22px;border-bottom:1px solid rgba(255,255,255,.1)">
+      <div style="font-size:17px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+      <div style="font-size:11px;letter-spacing:.1em;color:#8A8A8A;margin-top:3px">ADMIN CMS</div>
+    </div>
+    <nav style="display:flex;flex-direction:column;padding:14px 12px;gap:2px;font-size:14px;font-weight:600">
+      <a href="admin-dashboard.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Dashboard</a>
+      <a href="admin-putovanja.html" style="color:#fff;background:rgba(58,175,196,.22);border-left:3px solid #3AAFC4;padding:11px 16px;border-radius:0 4px 4px 0">Putovanja</a>
+      <a href="admin-rezervacije.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Rezervacije i uplate</a>
+      <a href="admin-upiti.html" style="color:#B9B9B9;padding:11px 19px;display:flex;justify-content:space-between;align-items:center" style-hover="color:#fff"><span>Upiti</span><span style="background:#3AAFC4;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:9px">7</span></a>
+      <a href="admin-medija.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Medija</a>
+      <span style="color:#6E6E6E;padding:11px 19px">Blog</span>
+      <span style="color:#6E6E6E;padding:11px 19px">Podešavanja</span>
+    </nav>
+    <div style="margin-top:auto;padding:18px 22px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px">
+      <span style="width:32px;height:32px;border-radius:50%;background:#3AAFC4;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px">D</span>
+      <div><div style="font-size:13px;font-weight:700;color:#E8E8E8">Dragan</div><div style="font-size:11.5px;color:#8A8A8A">Vlasnik · 2FA aktivan</div></div>
+    </div>
+    <a href="index.html" style="margin:14px 22px 0;font-size:12.5px;color:#8A8A8A" style-hover="color:#fff">← Nazad na sajt</a>
+  </div>
+
+  <!-- main -->
+  <div style="padding:30px 34px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+      <div>
+        <h1 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em">Putovanja</h1>
+        <div style="font-size:13px;color:#8A8A8A;margin-top:3px">12 programa · 9 objavljeno · 3 skice</div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <span style="border:1px solid rgba(0,0,0,.18);color:#3B3B3B;padding:10px 18px;border-radius:4px;font-weight:600;font-size:13.5px;background:#fff">Izvezi XLSX</span>
+        <a href="admin-novo-putovanje.html" style="background:#3AAFC4;color:#fff;padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px" style-hover="background:#2E97AB;color:#fff">+ Novo putovanje</a>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:12px;margin-bottom:18px;align-items:center">
+      <input type="text" placeholder="Pretraži putovanja…" style="border:1px solid rgba(0,0,0,.15);border-radius:4px;padding:11px 14px;font-size:13.5px;width:280px;background:#fff;color:#3B3B3B">
+      <span style="background:#3B3B3B;color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px">Sva</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Objavljena</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Skice</span>
+      <span style="border:1px solid rgba(0,0,0,.15);color:#3B3B3B;font-size:13px;font-weight:600;padding:9px 16px;border-radius:4px;background:#fff">Bez budućih termina</span>
+    </div>
+
+    <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;padding:13px 22px;background:#FCFBF9;gap:12px">
+        <span>PUTOVANJE</span><span>DESTINACIJA</span><span>BUDUĆI TERMINI</span><span>CENA OD</span><span>STATUS</span><span style="text-align:right">AKCIJE</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=200&q=80" alt="Tajland" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Tajland - plaže i hramovi</div><div style="font-size:12px;color:#8A8A8A">/tajland-puket-13-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">Tajland</span><span style="font-weight:600">7</span><span style="font-weight:600">1.399 €</span>
+        <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Objavljeno</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><a href="putovanje-tajland.html" style="color:#8A8A8A">Pogledaj</a></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?w=200&q=80" alt="Zanzibar" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Zanzibar - začinsko ostrvo</div><div style="font-size:12px;color:#8A8A8A">/zanzibar-10-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">Tanzanija</span><span style="font-weight:600">5</span><span style="font-weight:600">1.199 €</span>
+        <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Objavljeno</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><a href="putovanja.html" style="color:#8A8A8A">Pogledaj</a></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=200&q=80" alt="Bali" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Bali - ostrvo bogova</div><div style="font-size:12px;color:#8A8A8A">/bali-12-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">Indonezija</span><span style="font-weight:600">4</span><span style="font-weight:600">1.499 €</span>
+        <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Objavljeno</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><a href="putovanja.html" style="color:#8A8A8A">Pogledaj</a></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1500759285222-a95626b934cb?w=200&q=80" alt="Kuba" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Kuba - Havana i Varadero</div><div style="font-size:12px;color:#8A8A8A">/kuba-14-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">Kuba</span><span style="font-weight:600">3</span><span style="font-weight:600">1.799 €</span>
+        <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Objavljeno</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><a href="putovanja.html" style="color:#8A8A8A">Pogledaj</a></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=200&q=80" alt="Maldivi" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Maldivi - plavo do horizonta</div><div style="font-size:12px;color:#8A8A8A">/maldivi-9-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">Maldivi</span><span style="font-weight:600">4</span><span style="font-weight:600">1.699 €</span>
+        <span><span style="background:#E7F2E9;color:#3E7A4E;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Objavljeno</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><a href="putovanja.html" style="color:#8A8A8A">Pogledaj</a></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1528127269322-539801943592?w=200&q=80" alt="Vijetnam" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Vijetnam - od Hanoja do delte Mekonga</div><div style="font-size:12px;color:#8A8A8A">/vijetnam-12-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">Vijetnam</span><span style="font-weight:600">3</span><span style="font-weight:600">1.549 €</span>
+        <span><span style="background:#FDF3E1;color:#9A6B1F;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Skica</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><span style="color:#C5C5C5">Pogledaj</span></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2.2fr 1fr .9fr .9fr .8fr .9fr;padding:14px 22px;gap:12px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=200&q=80" alt="Dubai" style="width:52px;height:38px;object-fit:cover;border-radius:3px;display:block">
+          <div><div style="font-weight:700">Dubai - grad budućnosti</div><div style="font-size:12px;color:#8A8A8A">/dubai-6-dana</div></div>
+        </div>
+        <span style="color:#6B6B6B">UAE</span><span style="color:#B05252;font-weight:600">0</span><span style="font-weight:600">749 €</span>
+        <span><span style="background:#F7E7E4;color:#B05252;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px">Bez termina</span></span>
+        <div style="display:flex;gap:14px;justify-content:flex-end;font-size:13px;font-weight:600"><a href="admin-editor.html">Uredi</a><a href="putovanja.html" style="color:#8A8A8A">Pogledaj</a></div>
+      </div>
+
+    </div>
+    <div style="font-size:12.5px;color:#8A8A8A;margin-top:14px;line-height:1.6">Putovanja bez budućih termina automatski nestaju sa javnih listinga - URL ostaje živ sa porukom „trenutno nema termina". Slug objavljene stranice se menja samo uz automatski 301.</div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

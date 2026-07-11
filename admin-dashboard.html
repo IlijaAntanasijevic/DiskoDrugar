@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F2EE;font-family:'Archivo',system-ui,sans-serif;color:#3B3B3B}
+a{color:#2E97AB;text-decoration:none}a:hover{color:#3B3B3B}
+</style>
+</helmet>
+<dc-import name="Spinner" hint-size="1px,1px" style="position:fixed;left:0;top:0;width:1px;height:1px"></dc-import>
+
+<div style="display:grid;grid-template-columns:232px 1fr;min-height:100vh" data-screen-label="Admin - Dashboard">
+
+  <!-- sidebar -->
+  <div style="background:#3B3B3B;color:#B9B9B9;display:flex;flex-direction:column;padding:22px 0">
+    <div style="padding:0 22px 22px;border-bottom:1px solid rgba(255,255,255,.1)">
+      <div style="font-size:17px;font-weight:800;color:#fff">disko drugar<span style="color:#3AAFC4">.</span></div>
+      <div style="font-size:11px;letter-spacing:.1em;color:#8A8A8A;margin-top:3px">ADMIN CMS</div>
+    </div>
+    <nav style="display:flex;flex-direction:column;padding:14px 12px;gap:2px;font-size:14px;font-weight:600">
+      <a href="admin-dashboard.html" style="color:#fff;background:rgba(58,175,196,.22);border-left:3px solid #3AAFC4;padding:11px 16px;border-radius:0 4px 4px 0">Dashboard</a>
+      <a href="admin-putovanja.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Putovanja</a>
+      <a href="admin-rezervacije.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Rezervacije i uplate</a>
+      <a href="admin-upiti.html" style="color:#B9B9B9;padding:11px 19px;display:flex;justify-content:space-between;align-items:center" style-hover="color:#fff"><span>Upiti</span><span style="background:#3AAFC4;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:9px">7</span></a>
+      <a href="admin-medija.html" style="color:#B9B9B9;padding:11px 19px" style-hover="color:#fff">Medija</a>
+      <span style="color:#6E6E6E;padding:11px 19px">Blog</span>
+      <span style="color:#6E6E6E;padding:11px 19px">Podešavanja</span>
+    </nav>
+    <div style="margin-top:auto;padding:18px 22px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:12px">
+      <span style="width:32px;height:32px;border-radius:50%;background:#3AAFC4;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px">D</span>
+      <div><div style="font-size:13px;font-weight:700;color:#E8E8E8">Dragan</div><div style="font-size:11.5px;color:#8A8A8A">Vlasnik · 2FA aktivan</div></div>
+    </div>
+    <a href="index.html" style="margin:14px 22px 0;font-size:12.5px;color:#8A8A8A" style-hover="color:#fff">← Nazad na sajt</a>
+  </div>
+
+  <!-- main -->
+  <div style="padding:30px 34px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:26px">
+      <div>
+        <h1 style="margin:0;font-size:22px;font-weight:700;letter-spacing:-.02em">Dashboard</h1>
+        <div style="font-size:13px;color:#8A8A8A;margin-top:3px">Subota, 11. jul 2026.</div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <a href="admin-putovanja.html" style="border:1px solid rgba(0,0,0,.18);color:#3B3B3B;padding:10px 18px;border-radius:4px;font-weight:600;font-size:13.5px;background:#fff" style-hover="background:#F4F2EE;color:#3B3B3B">+ Novi termin</a>
+        <a href="admin-novo-putovanje.html" style="background:#3AAFC4;color:#fff;padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px" style-hover="background:#2E97AB;color:#fff">+ Novo putovanje</a>
+      </div>
+    </div>
+
+    <!-- KPI -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px">
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:20px 22px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;margin-bottom:10px">UPITI NA ČEKANJU</div>
+        <div style="font-size:30px;font-weight:700;letter-spacing:-.03em">7</div>
+        <div style="font-size:12.5px;color:#2E97AB;font-weight:600;margin-top:6px">3 nova danas</div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:20px 22px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;margin-bottom:10px">REZERVACIJE · JUL</div>
+        <div style="font-size:30px;font-weight:700;letter-spacing:-.03em">23</div>
+        <div style="font-size:12.5px;color:#6B6B6B;margin-top:6px">58 putnika ukupno</div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:20px 22px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;margin-bottom:10px">NAPLAĆENO · JUL</div>
+        <div style="font-size:30px;font-weight:700;letter-spacing:-.03em">41.350 €</div>
+        <div style="font-size:12.5px;color:#6B6B6B;margin-top:6px">+ 812.400 RSD</div>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;padding:20px 22px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;margin-bottom:10px">POPUNJENOST · ZIMA</div>
+        <div style="font-size:30px;font-weight:700;letter-spacing:-.03em">82%</div>
+        <div style="height:5px;background:#EDEAE4;border-radius:3px;margin-top:12px;overflow:hidden"><div style="width:82%;height:100%;background:#3AAFC4"></div></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:14px;align-items:start">
+
+      <!-- polasci -->
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid rgba(0,0,0,.06)">
+          <div style="font-size:15px;font-weight:700">Najbliži polasci</div>
+          <a href="admin-putovanja.html" style="font-size:13px;font-weight:600">Sva putovanja →</a>
+        </div>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;font-size:11px;font-weight:700;letter-spacing:.08em;color:#8A8A8A;padding:12px 22px;background:#FCFBF9;gap:10px">
+          <span>PUTOVANJE</span><span>POLAZAK</span><span>PRIJAVLJENO</span><span>POPUNJENOST</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;padding:15px 22px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <span style="font-weight:700">Tajland - Puket</span><span style="color:#6B6B6B">25. okt 2026.</span><span style="font-weight:600">21 / 25</span>
+          <div style="height:5px;background:#EDEAE4;border-radius:3px;overflow:hidden"><div style="width:84%;height:100%;background:#3AAFC4"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;padding:15px 22px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <span style="font-weight:700">Tenerife</span><span style="color:#6B6B6B">21. nov 2026.</span><span style="font-weight:600">23 / 25</span>
+          <div style="height:5px;background:#EDEAE4;border-radius:3px;overflow:hidden"><div style="width:92%;height:100%;background:#3AAFC4"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;padding:15px 22px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <span style="font-weight:700">Zanzibar</span><span style="color:#6B6B6B">15. nov 2026.</span><span style="font-weight:600">14 / 25</span>
+          <div style="height:5px;background:#EDEAE4;border-radius:3px;overflow:hidden"><div style="width:56%;height:100%;background:#8A8A8A"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;padding:15px 22px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <span style="font-weight:700">Maldivi</span><span style="color:#6B6B6B">05. dec 2026.</span><span style="font-weight:600">9 / 20</span>
+          <div style="height:5px;background:#EDEAE4;border-radius:3px;overflow:hidden"><div style="width:45%;height:100%;background:#8A8A8A"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1.5fr 1fr .8fr 1fr;padding:15px 22px;gap:10px;font-size:13.5px;border-top:1px solid rgba(0,0,0,.05);align-items:center" style-hover="background:#FCFBF9">
+          <span style="font-weight:700">Tajland - Puket</span><span style="color:#6B6B6B">04. jan 2027.</span><span style="font-weight:600">25 / 25</span>
+          <div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:5px;background:#EDEAE4;border-radius:3px;overflow:hidden"><div style="width:100%;height:100%;background:#3AAFC4"></div></div><span style="font-size:11px;font-weight:700;color:#2E97AB">PUN</span></div>
+        </div>
+      </div>
+
+      <!-- upiti -->
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;overflow:hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid rgba(0,0,0,.06)">
+          <div style="font-size:15px;font-weight:700">Novi upiti</div>
+          <a href="admin-upiti.html" style="font-size:13px;font-weight:600">Svi upiti →</a>
+        </div>
+        <a href="admin-upiti.html" style="display:block;padding:15px 22px;border-top:1px solid rgba(0,0,0,.05);color:inherit" style-hover="background:#FCFBF9;color:inherit">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:14px;font-weight:700">Jelena Petrović</span><span style="font-size:12px;color:#8A8A8A">pre 32 min</span></div>
+          <div style="font-size:13px;color:#6B6B6B">Tajland, 12. jan · 2 putnika · „Da li je moguća vegetarijanska…"</div>
+        </a>
+        <a href="admin-upiti.html" style="display:block;padding:15px 22px;border-top:1px solid rgba(0,0,0,.05);color:inherit" style-hover="background:#FCFBF9;color:inherit">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:14px;font-weight:700">Nikola Stanić</span><span style="font-size:12px;color:#8A8A8A">pre 2h</span></div>
+          <div style="font-size:13px;color:#6B6B6B">Zanzibar, februar · 4 putnika · „Zanima nas porodična soba…"</div>
+        </a>
+        <a href="admin-upiti.html" style="display:block;padding:15px 22px;border-top:1px solid rgba(0,0,0,.05);color:inherit" style-hover="background:#FCFBF9;color:inherit">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:14px;font-weight:700">Ana Kovačević</span><span style="font-size:12px;color:#8A8A8A">pre 5h</span></div>
+          <div style="font-size:13px;color:#6B6B6B">Ne zna destinaciju · 2 putnika · „Budžet do 1.500 € po osobi…"</div>
+        </a>
+        <div style="padding:15px 22px;border-top:1px solid rgba(0,0,0,.05);background:#FCFBF9;font-size:12.5px;color:#8A8A8A">Prosečno vreme odgovora ove nedelje: 3h 40min</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
